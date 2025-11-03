@@ -96,10 +96,6 @@ For production, update to your deployed backend URL.
 - `https://twitter.com`
 - `https://stackoverflow.com`
 
-## 📝 License
-
-MIT
-
 ---
 
 **Built with ❤️ using Next.js and the Deep Favicon Fetcher Backend**
