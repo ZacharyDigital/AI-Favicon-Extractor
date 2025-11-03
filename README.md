@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Favicon Extractor
 
-## Getting Started
+**The Most Comprehensive Favicon Extraction Tool** built with Next.js 16, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🌟 Features
+
+### Deep Extraction
+
+- Extracts **all** favicon formats from any website
+- Supports HTML `<link>` tags, Web Manifest, and BrowserConfig
+- Finds icons from multiple sources: HTML, manifest.json, browserconfig.xml
+- Handles all modern icon standards (apple-touch-icon, SVG, PNG, ICO, etc.)
+
+### Visual Matrix Display
+
+- **Beautiful card-based layout** for each icon
+- Live preview of all extracted icons
+- Size, format, and source information for each icon
+- Individual download buttons for each icon
+
+### One-Click ZIP Download
+
+- Download all icons as a single ZIP file
+- Automatically named and organized
+- Includes README with metadata
+- Progress indicator during download
+
+### Intelligent Analysis
+
+- **Smart scoring system** (0-100 points)
+- Best practice recommendations
+- Missing icon warnings
+- Feature coverage checklist
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ installed
+- Backend API running (see `../backend/README.md`)
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment configuration
+cp .env.local.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at `http://localhost:3001` (or next available port).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🔧 Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3000
+```
 
-## Deploy on Vercel
+For production, update to your deployed backend URL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **HTTP Client:** Axios
+- **ZIP Creation:** JSZip
+
+## 🎯 Usage
+
+1. **Enter a URL** - Type any website URL (must include `http://` or `https://`)
+2. **Click Extract** - The deep crawler will fetch all favicons
+3. **View Results** - See all icons in a beautiful visual matrix
+4. **Get Analysis** - Review intelligent insights and recommendations
+5. **Download** - Download individual icons or all as ZIP
+
+### Example URLs to Try
+
+- `https://github.com`
+- `https://twitter.com`
+- `https://stackoverflow.com`
+
+## 📝 License
+
+MIT
+
+---
+
+**Built with ❤️ using Next.js and the Deep Favicon Fetcher Backend**
