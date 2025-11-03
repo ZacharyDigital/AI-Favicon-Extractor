@@ -81,6 +81,9 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   category: 'technology',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export const viewport: Viewport = {
