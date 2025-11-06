@@ -1,8 +1,9 @@
 import axios from 'axios';
 import type { FaviconResponse } from '@/types/favicon';
+import { appConfig } from '@/config';
 
-// Backend API base URL - configurable via environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+// Backend API base URL - from centralized config
+const API_BASE_URL = appConfig.apiUrl;
 
 /**
  * Deep fetch all favicons from a URL

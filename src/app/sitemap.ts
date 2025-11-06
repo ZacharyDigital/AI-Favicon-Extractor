@@ -25,7 +25,8 @@ import { appConfig } from '@/config';
  *    - sitemap 会自动为每个语言生成对应的 URL
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
+  // 使用统一配置的站点 URL
+  const siteUrl = appConfig.siteUrl;
 
   // 只包含实际存在的路由
   // 添加新路由时，在此数组中添加路径

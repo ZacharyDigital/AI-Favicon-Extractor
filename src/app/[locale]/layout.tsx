@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
+// 使用统一配置的站点 URL
+const siteUrl = appConfig.siteUrl;
 
 export async function generateMetadata({
   params,
@@ -89,23 +90,24 @@ export async function generateMetadata({
     verification: (() => {
       const verification: Record<string, string> = {};
 
-      if (process.env.GOOGLE_VERIFICATION_CODE) {
-        verification.google = process.env.GOOGLE_VERIFICATION_CODE;
+      // 使用统一配置的验证码
+      if (appConfig.verification.google) {
+        verification.google = appConfig.verification.google;
       }
-      if (process.env.YANDEX_VERIFICATION_CODE) {
-        verification.yandex = process.env.YANDEX_VERIFICATION_CODE;
+      if (appConfig.verification.yandex) {
+        verification.yandex = appConfig.verification.yandex;
       }
-      if (process.env.YAHOO_VERIFICATION_CODE) {
-        verification.yahoo = process.env.YAHOO_VERIFICATION_CODE;
+      if (appConfig.verification.yahoo) {
+        verification.yahoo = appConfig.verification.yahoo;
       }
-      if (process.env.BING_VERIFICATION_CODE) {
-        verification['msvalidate.01'] = process.env.BING_VERIFICATION_CODE;
+      if (appConfig.verification.bing) {
+        verification['msvalidate.01'] = appConfig.verification.bing;
       }
-      if (process.env.BAIDU_VERIFICATION_CODE) {
-        verification['baidu-site-verification'] = process.env.BAIDU_VERIFICATION_CODE;
+      if (appConfig.verification.baidu) {
+        verification['baidu-site-verification'] = appConfig.verification.baidu;
       }
-      if (process.env.NAVER_VERIFICATION_CODE) {
-        verification['naver-site-verification'] = process.env.NAVER_VERIFICATION_CODE;
+      if (appConfig.verification.naver) {
+        verification['naver-site-verification'] = appConfig.verification.naver;
       }
 
       return Object.keys(verification).length > 0 ? verification : undefined;

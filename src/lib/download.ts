@@ -2,8 +2,10 @@ import JSZip from 'jszip';
 import axios from 'axios';
 import { getFileExtension, sanitizeFilename, getDomainFromUrl } from './utils';
 import type { DownloadableIcon } from '@/types/favicon';
+import { appConfig } from '@/config';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.aifavicon.com';
+// Backend API base URL - from centralized config
+const API_BASE_URL = appConfig.apiUrl;
 
 /**
  * Download icon via backend proxy to avoid CORS issues
@@ -78,14 +80,12 @@ export async function downloadAllIconsAsZip(
       const blob = await fetchIconBlob(icon.href);
       const extension = getFileExtension(icon.href, icon.type);
       const size = icon.size || icon.sizes || 'unknown';
-      
+
       // Create unique filename for each icon
-      const filename = sanitizeFilename(
-        `${index + 1}_${icon.source}_${size}.${extension}`
-      );
+      const filename = sanitizeFilename(`${index + 1}_${icon.source}_${size}.${extension}`);
 
       folder.file(filename, blob);
-      
+
       completed++;
       if (onProgress) {
         onProgress(completed, total);
@@ -125,11 +125,7 @@ export async function downloadAllIconsAsZip(
 /**
  * Generate README content for the ZIP file
  */
-function generateReadme(
-  icons: DownloadableIcon[],
-  websiteUrl: string,
-  domain: string
-): string {
+function generateReadme(icons: DownloadableIcon[], websiteUrl: string, domain: string): string {
   const date = new Date().toLocaleDateString();
   const time = new Date().toLocaleTimeString();
 
@@ -145,7 +141,7 @@ function generateReadme(
     const extension = getFileExtension(icon.href, icon.type);
     const size = icon.size || icon.sizes || 'unknown';
     const filename = sanitizeFilename(`${index + 1}_${icon.source}_${size}.${extension}`);
-    
+
     content += `${index + 1}. ${filename}\n`;
     content += `   Size: ${icon.displaySize}\n`;
     content += `   Source: ${icon.source}\n`;

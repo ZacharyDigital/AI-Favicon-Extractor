@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { appConfig } from '@/config';
 
 interface StructuredDataProps {
   locale: string;
@@ -14,7 +15,7 @@ export async function StructuredData({ locale }: StructuredDataProps) {
     description: t('meta.description'),
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app',
+    url: appConfig.siteUrl,
     offers: {
       '@type': 'Offer',
       price: '0',

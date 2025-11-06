@@ -6,7 +6,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { getTranslations } from 'next-intl/server';
 import { appConfig } from '@/config';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
+// 使用统一配置的站点 URL
+const siteUrl = appConfig.siteUrl;
 
 export async function generateMetadata({
   params,

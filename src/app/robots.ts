@@ -1,7 +1,9 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { appConfig } from '@/config';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
+  // 使用统一配置的站点 URL
+  const siteUrl = appConfig.siteUrl;
 
   return {
     rules: [
@@ -22,5 +24,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
-  }
+  };
 }
