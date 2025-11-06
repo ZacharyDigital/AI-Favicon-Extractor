@@ -3,7 +3,15 @@ import type { FaviconResponse } from '@/types/favicon';
 import { appConfig } from '@/config';
 
 // Backend API base URL - from centralized config
+// 生产环境必须通过环境变量 NEXT_PUBLIC_API_URL 配置
 const API_BASE_URL = appConfig.apiUrl;
+
+// 验证 API 地址是否已配置（生产环境必须配置）
+if (!API_BASE_URL && process.env.NODE_ENV === 'production') {
+  console.error(
+    '❌ NEXT_PUBLIC_API_URL is not configured. Please set it in your environment variables.'
+  );
+}
 
 /**
  * Deep fetch all favicons from a URL

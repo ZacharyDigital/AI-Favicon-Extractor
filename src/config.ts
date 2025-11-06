@@ -10,16 +10,21 @@ export type LocaleType = (typeof locales)[number];
  */
 export const appConfig = {
   // 应用基础信息
-  appDomain: process.env.NODE_ENV === 'development' ? 'localhost:3001' : 'favicon-extractor.app',
-  appRootDomain: 'favicon-extractor.app',
+  appDomain: process.env.NODE_ENV === 'development' ? 'localhost:3001' : 'www.aifavicon.com',
+  appRootDomain: 'www.aifavicon.com',
   appName: 'AI Favicon Extractor',
   appDescription: 'The most comprehensive favicon extraction tool',
 
   // 站点 URL - 统一配置
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aifavicon.com',
 
   // API 配置 - 统一配置
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001',
+  // 注意：API 地址不应在代码中硬编码，必须通过环境变量 NEXT_PUBLIC_API_URL 配置
+  // 开发环境默认值仅用于本地开发，生产环境必须通过环境变量配置
+  // 如果未配置且不是开发环境，使用空字符串（需要确保环境变量已配置）
+  apiUrl:
+    process.env.NEXT_PUBLIC_API_URL ||
+    (process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : ''),
 
   // 国际化配置
   i18n: {
