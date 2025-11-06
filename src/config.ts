@@ -1,5 +1,5 @@
 // 国际化配置中心
-const locales = ['en', 'zh', 'es', 'de', 'fr', 'ja'] as const;
+const locales = ['en', 'zh'] as const;
 const defaultLocale = "en" as const;
 
 export type LocaleType = typeof locales[number];
@@ -18,11 +18,7 @@ export const appConfig = {
     defaultLocale,
     labels: {
       "en": "English",
-      "zh": "中文",
-      "es": "Español",
-      "de": "Deutsch",
-      "fr": "Français",
-      "ja": "日本語"
+      "zh": "中文"
     } as Record<LocaleType, string>
   },
   
