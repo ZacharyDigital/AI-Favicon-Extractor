@@ -66,13 +66,13 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
-      url: siteUrl,
+      url: locale === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       title: t('meta.og_title'),
       description: t('meta.description'),
       siteName: 'Favicon Extractor',
       images: [
         {
-          url: '/og-image.png',
+          url: `${siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
           alt: 'Favicon Extractor - Extract website icons',
@@ -83,22 +83,20 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t('meta.title'),
       description: t('meta.description'),
-      images: ['/twitter-image.png'],
+      images: [`${siteUrl}/twitter-image.png`],
       creator: t('meta.twitter_creator'),
     },
     verification: {
-      google: 'your-google-verification-code',
+      google: process.env.GOOGLE_VERIFICATION_CODE || undefined,
     },
     alternates: {
-      canonical: siteUrl,
-      languages: {
-        en: `${siteUrl}`,
-        zh: `${siteUrl}/zh`,
-        es: `${siteUrl}/es`,
-        de: `${siteUrl}/de`,
-        fr: `${siteUrl}/fr`,
-        ja: `${siteUrl}/ja`,
-      },
+      canonical: locale === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
+      languages: Object.fromEntries(
+        appConfig.i18n.locales.map((loc) => [
+          loc,
+          loc === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${loc}`,
+        ])
+      ),
     },
     manifest: '/manifest.webmanifest',
     category: 'technology',

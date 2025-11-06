@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { FaviconResponse } from '@/types/favicon';
 
 // Backend API base URL - configurable via environment variable
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 /**
  * Deep fetch all favicons from a URL
@@ -10,18 +10,14 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 export async function fetchFavicons(url: string): Promise<FaviconResponse> {
   try {
     const encodedUrl = encodeURIComponent(url);
-    const response = await axios.get<FaviconResponse>(
-      `${API_BASE_URL}/api/deep/${encodedUrl}`,
-      {
-        timeout: 30000, // 30 second timeout
-      }
-    );
+    const response = await axios.get<FaviconResponse>(`${API_BASE_URL}/api/deep/${encodedUrl}`, {
+      timeout: 30000, // 30 second timeout
+    });
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       throw new Error(
-        error.response?.data?.message || 
-        `Failed to fetch favicons: ${error.message}`
+        error.response?.data?.message || `Failed to fetch favicons: ${error.message}`
       );
     }
     throw error;
@@ -34,13 +30,10 @@ export async function fetchFavicons(url: string): Promise<FaviconResponse> {
 export async function getBestFavicon(url: string): Promise<string> {
   try {
     const encodedUrl = encodeURIComponent(url);
-    const response = await axios.get<string>(
-      `${API_BASE_URL}/api/best/${encodedUrl}`,
-      {
-        timeout: 30000,
-        responseType: 'text',
-      }
-    );
+    const response = await axios.get<string>(`${API_BASE_URL}/api/best/${encodedUrl}`, {
+      timeout: 30000,
+      responseType: 'text',
+    });
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -56,13 +49,10 @@ export async function getBestFavicon(url: string): Promise<string> {
 export async function downloadFaviconImage(url: string): Promise<Blob> {
   try {
     const encodedUrl = encodeURIComponent(url);
-    const response = await axios.get(
-      `${API_BASE_URL}/api/image/${encodedUrl}`,
-      {
-        timeout: 30000,
-        responseType: 'blob',
-      }
-    );
+    const response = await axios.get(`${API_BASE_URL}/api/image/${encodedUrl}`, {
+      timeout: 30000,
+      responseType: 'blob',
+    });
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error)) {

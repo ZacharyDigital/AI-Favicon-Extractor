@@ -37,7 +37,7 @@
 ### Prerequisites
 
 - Node.js 18+ installed
-- Backend API running (see `../backend/README.md`)
+- Backend API running
 
 ### Installation
 
@@ -52,7 +52,7 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-The app will be available at `http://localhost:3001` (or next available port).
+The app will be available at `http://localhost:3000` (or next available port).
 
 ### Production Build
 
@@ -68,7 +68,7 @@ npm start
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
 For production, update to your deployed backend URL.

@@ -1,8 +1,65 @@
+import type { Metadata } from 'next';
 import { Package } from 'lucide-react';
 import { FaviconExtractor } from '@/components/FaviconExtractor';
 import { StructuredData } from '@/components/StructuredData';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { getTranslations } from 'next-intl/server';
+import { appConfig } from '@/config';
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  const currentUrl = locale === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${locale}`;
+
+  // 生成所有语言的 hreflang 链接
+  const alternates: Record<string, string> = {};
+  appConfig.i18n.locales.forEach((loc) => {
+    alternates[loc] = loc === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${loc}`;
+  });
+
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+    keywords: [
+      'favicon extractor',
+      'favicon downloader',
+      'icon extractor',
+      'website icons',
+      'web manifest',
+      'browserconfig',
+      'apple touch icon',
+      'favicon crawler',
+      'deep crawler',
+      'favicon fetcher',
+      'icon download',
+      'website favicon',
+    ],
+    alternates: {
+      canonical: currentUrl,
+      languages: alternates,
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      url: currentUrl,
+      title: t('meta.og_title') || t('meta.title'),
+      description: t('meta.description'),
+      siteName: 'Favicon Extractor',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('meta.title'),
+      description: t('meta.description'),
+    },
+  };
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -10,7 +67,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <StructuredData />
+      <StructuredData locale={locale} />
 
       {/* Header */}
       <header className="border-b border-gray-300 bg-white shadow-sm sticky top-0 z-50">

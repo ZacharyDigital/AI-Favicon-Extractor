@@ -1,11 +1,20 @@
-export function StructuredData() {
+import { getTranslations } from 'next-intl/server';
+
+interface StructuredDataProps {
+  locale: string;
+}
+
+export async function StructuredData({ locale }: StructuredDataProps) {
+  const t = await getTranslations({ locale });
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'Favicon Extractor',
-    description: 'Extract all favicons from any website with deep crawling. Supports HTML, Web Manifest, BrowserConfig, and provides intelligent analysis with download options.',
+    name: t('meta.title'),
+    description: t('meta.description'),
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -17,13 +26,12 @@ export function StructuredData() {
       ratingCount: '1250',
     },
     featureList: [
-      'Deep crawling for comprehensive favicon extraction',
-      'Support for multiple icon standards (HTML, Web Manifest, BrowserConfig)',
-      'Intelligent analysis and recommendations',
-      'One-click ZIP download',
-      'Preview all icon formats and sizes',
-      'Headless browser rendering for JavaScript-driven sites',
+      t('features.deep_extraction'),
+      t('features.visual_matrix'),
+      t('features.one_click_zip'),
+      t('features.smart_analysis'),
     ],
+    inLanguage: locale === 'zh' ? 'zh-CN' : 'en-US',
   };
 
   return (
