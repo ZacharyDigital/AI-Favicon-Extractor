@@ -1,8 +1,9 @@
 import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 import type { FaviconIcon, FaviconResponse, IconAnalysis, DownloadableIcon } from '@/types/favicon';
 
 export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
+  return twMerge(clsx(inputs));
 }
 
 /**
@@ -114,7 +115,7 @@ export function analyzeFavicons(data: FaviconResponse): IconAnalysis {
 export function prepareIconsForDownload(icons: FaviconIcon[]): DownloadableIcon[] {
   return icons.map((icon, index) => {
     let displaySize = 'Unknown';
-    
+
     if (icon.size) {
       displaySize = `${icon.size}x${icon.size}`;
     } else if (icon.sizes) {
@@ -220,6 +221,6 @@ export function formatRelativeTime(date: Date): string {
   if (diffMins < 60) return `${diffMins} min${diffMins > 1 ? 's' : ''} ago`;
   if (diffHours < 24) return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
   if (diffDays < 7) return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
-  
+
   return date.toLocaleDateString();
 }

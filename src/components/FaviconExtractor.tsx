@@ -5,6 +5,8 @@ import { Search, Download, Loader2, AlertCircle } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { IconCard } from '@/components/IconCard';
 import { AnalysisPanel } from '@/components/AnalysisPanel';
 import { fetchFavicons } from '@/lib/api';
@@ -100,17 +102,18 @@ export function FaviconExtractor() {
         <form onSubmit={form.handleSubmit(handleExtract)} className="mb-8">
           <div className="flex flex-col gap-4">
             <div className="relative">
-              <input
+              <Input
                 {...form.register('url')}
                 type="text"
                 placeholder={t('form.placeholder')}
-                className="w-full rounded-xl border-2 border-gray-300 bg-white px-5 py-4 pr-32 text-lg shadow-sm transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                className="w-full pr-32 text-lg h-14 rounded-xl"
                 disabled={form.formState.isSubmitting}
               />
-              <button
+              <Button
                 type="submit"
                 disabled={form.formState.isSubmitting}
-                className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-2 rounded-lg bg-blue-600 px-6 py-2.5 font-medium text-white shadow-sm transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+                size="lg"
+                className="absolute right-2 top-1/2 -translate-y-1/2"
               >
                 {form.formState.isSubmitting ? (
                   <>
@@ -123,7 +126,7 @@ export function FaviconExtractor() {
                     {t('form.button_extract')}
                   </>
                 )}
-              </button>
+              </Button>
             </div>
 
             {/* Example URLs */}
@@ -131,14 +134,16 @@ export function FaviconExtractor() {
               <span className="text-sm text-gray-600">{t('form.try_label')}</span>
               {['https://github.com', 'https://twitter.com', 'https://stackoverflow.com'].map(
                 (example) => (
-                  <button
+                  <Button
                     key={example}
                     type="button"
+                    variant="outline"
+                    size="sm"
                     onClick={() => handleTryExample(example)}
-                    className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700 transition-colors hover:bg-gray-200"
+                    className="rounded-full"
                   >
                     {getDomainFromUrl(example)}
-                  </button>
+                  </Button>
                 )
               )}
             </div>
@@ -199,10 +204,11 @@ export function FaviconExtractor() {
                 {t('results.extracted_from', { domain: getDomainFromUrl(form.getValues('url')) })}
               </p>
             </div>
-            <button
+            <Button
               onClick={handleDownloadAll}
               disabled={downloadingZip}
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white shadow-lg transition-all hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
             >
               {downloadingZip ? (
                 <>
@@ -218,7 +224,7 @@ export function FaviconExtractor() {
                   {t('results.download_all')}
                 </>
               )}
-            </button>
+            </Button>
           </div>
 
           {/* Analysis Panel */}
