@@ -32,7 +32,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
   };
 
   return (
-    <Card className="border-gray-100 bg-white/90 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow">
+    <Card className="border-gray-200/80 bg-white/95 backdrop-blur-sm shadow-sm hover:shadow-md hover:border-blue-200/50 transition-all duration-200">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">{t('analysis.title')}</CardTitle>

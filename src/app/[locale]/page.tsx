@@ -13,7 +13,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <StructuredData />
 
       {/* Header */}
-      <header className="border-b border-gray-100 bg-white/90 backdrop-blur-md shadow-sm">
+      <header className="border-b border-gray-200/50 bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div>
@@ -57,7 +57,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-xl border border-gray-100 bg-white/80 backdrop-blur-sm p-6 shadow-sm hover:shadow-lg hover:border-gray-200 transition-all duration-200"
+                className="rounded-xl border border-gray-200/60 bg-white/90 backdrop-blur-sm p-6 shadow-sm hover:shadow-md hover:border-blue-200/50 hover:bg-white transition-all duration-300"
               >
                 <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
                 <p className="text-sm text-gray-600">{feature.desc}</p>
@@ -68,7 +68,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </main>
 
       {/* Footer */}
-      <footer className="mt-20 border-t border-gray-100 bg-white/60 backdrop-blur-sm py-8">
+      <footer className="mt-20 border-t border-gray-200/50 bg-white/80 backdrop-blur-sm py-8">
         <div className="mx-auto max-w-7xl px-4 text-center text-sm text-gray-600 sm:px-6 lg:px-8">
           <p>{t('footer.text')}</p>
         </div>
