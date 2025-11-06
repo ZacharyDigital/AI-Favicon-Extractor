@@ -13,7 +13,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <StructuredData />
 
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+      <header className="border-b border-gray-100 bg-white/90 backdrop-blur-md shadow-sm">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div>
@@ -57,7 +57,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-xl border border-gray-100 bg-white/80 backdrop-blur-sm p-6 shadow-sm hover:shadow-lg hover:border-gray-200 transition-all duration-200"
               >
                 <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
                 <p className="text-sm text-gray-600">{feature.desc}</p>
@@ -68,7 +68,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 border-t border-gray-200 bg-white/50 py-6">
+      <footer className="mt-20 border-t border-gray-100 bg-white/60 backdrop-blur-sm py-8">
         <div className="mx-auto max-w-7xl px-4 text-center text-sm text-gray-600 sm:px-6 lg:px-8">
           <p>{t('footer.text')}</p>
         </div>

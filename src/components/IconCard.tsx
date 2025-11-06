@@ -58,8 +58,8 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
   };
 
   return (
-    <Card className="group transition-all hover:shadow-md border-gray-200 bg-white shadow-sm">
-      <CardContent className="p-4">
+    <Card className="group transition-all hover:shadow-lg hover:border-gray-200 border-gray-100 bg-white/90 backdrop-blur-sm shadow-sm">
+      <CardContent className="p-5">
         {/* Icon Preview */}
         <div className="mb-3 flex items-center justify-center rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 p-6">
           {!imageError ? (
@@ -129,7 +129,7 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
             variant="outline"
             size="icon"
             title={t('icon_card.copy_url')}
-            className="border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+            className="border-gray-100 hover:bg-gray-50/80 hover:border-gray-200 transition-all"
           >
             {isCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
           </Button>
@@ -139,7 +139,7 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
             variant="outline"
             size="icon"
             title={t('icon_card.open_new_tab')}
-            className="border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+            className="border-gray-100 hover:bg-gray-50/80 hover:border-gray-200 transition-all"
           >
             <a href={icon.href} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4" />

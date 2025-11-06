@@ -106,7 +106,7 @@ export function FaviconExtractor() {
                 {...form.register('url')}
                 type="text"
                 placeholder={t('form.placeholder')}
-                className="w-full pr-32 text-lg h-14 rounded-xl border-2 border-gray-200 bg-white shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                className="w-full pr-32 text-lg h-14 rounded-xl border border-gray-100 bg-white/90 backdrop-blur-sm shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all hover:border-gray-200"
                 disabled={form.formState.isSubmitting}
               />
               <Button
@@ -140,7 +140,7 @@ export function FaviconExtractor() {
                     variant="outline"
                     size="sm"
                     onClick={() => handleTryExample(example)}
-                    className="rounded-full border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+                    className="rounded-full border-gray-100 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-gray-200 hover:shadow-sm transition-all"
                   >
                     {getDomainFromUrl(example)}
                   </Button>
@@ -192,7 +192,7 @@ export function FaviconExtractor() {
       {data && icons.length > 0 && (
         <div className="space-y-8">
           {/* Action Bar */}
-          <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="flex items-center justify-between rounded-xl border border-gray-100 bg-white/90 backdrop-blur-sm p-6 shadow-sm hover:shadow-md transition-shadow">
             <div>
               <h2 className="text-lg font-semibold text-gray-900">
                 {t('results.found', {
