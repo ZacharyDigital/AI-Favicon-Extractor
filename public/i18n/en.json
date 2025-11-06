@@ -1,0 +1,79 @@
+{
+  "common": {
+    "app_name": "AI Favicon Extractor",
+    "powered_by": "Powered by Deep Crawler"
+  },
+  "meta": {
+    "title": "Favicon Extractor - The Most Comprehensive Tool",
+    "description": "Extract all favicons from any website with deep crawling. Supports HTML, Web Manifest, BrowserConfig, and provides intelligent analysis with download options.",
+    "og_title": "Favicon Extractor - Extract website icons",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "AIFavicon Extractor",
+    "subtitle": "The most comprehensive favicon extraction tool"
+  },
+  "form": {
+    "placeholder": "Enter website URL (e.g., https://github.com)",
+    "button_extract": "Extract",
+    "button_extracting": "Extracting...",
+    "try_label": "Try:",
+    "error_empty": "Please enter a URL",
+    "error_invalid": "Please enter a valid URL (including http:// or https://)"
+  },
+  "results": {
+    "found": "Found {count} icon{plural}",
+    "extracted_from": "Extracted from {domain}",
+    "download_all": "Download All as ZIP",
+    "downloading": "Preparing ZIP... ({current}/{total})",
+    "icon_collection": "Icon Collection"
+  },
+  "warnings": {
+    "captcha_title": "Using API Fallback",
+    "captcha_message": "This website has anti-bot protection. We're using Google S2 and DuckDuckGo favicon APIs to provide high-quality icons instead.",
+    "no_icons_title": "No Icons Found",
+    "no_icons_message": "No favicons were detected for this website. This might be because: the site doesn't have a favicon, or it requires JavaScript rendering."
+  },
+  "analysis": {
+    "title": "Intelligent Analysis",
+    "excellent": "Excellent",
+    "good": "Good",
+    "needs_improvement": "Needs Improvement",
+    "total_icons": "Total Icons",
+    "svg_format": "SVG Format",
+    "web_manifest": "Web Manifest",
+    "best_practices": "Best Practices Detected",
+    "improvements": "Improvement Suggestions",
+    "feature_coverage": "Feature Coverage",
+    "apple_touch_icon": "Apple Touch Icon",
+    "apple_touch_icon_desc": "For iOS home screen",
+    "high_resolution": "High Resolution (512x512+)",
+    "high_resolution_desc": "For PWA and modern displays",
+    "svg_format_desc": "Scalable vector graphics",
+    "web_manifest_desc": "PWA configuration",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Windows tile images"
+  },
+  "icon_card": {
+    "download": "Download",
+    "downloading": "Downloading...",
+    "copy_url": "Copy URL",
+    "open_new_tab": "Open in new tab"
+  },
+  "features": {
+    "title": "Extract All Favicons from Any Website",
+    "description": "Our deep crawler extracts all icon formats including HTML, Web Manifest, BrowserConfig, and provides intelligent analysis with download options.",
+    "deep_extraction": "Deep Extraction",
+    "deep_extraction_desc": "Finds all icon formats and sizes",
+    "visual_matrix": "Visual Matrix",
+    "visual_matrix_desc": "Preview all icons before download",
+    "one_click_zip": "One-Click ZIP",
+    "one_click_zip_desc": "Download everything at once",
+    "smart_analysis": "Smart Analysis",
+    "smart_analysis_desc": "Get insights and recommendations"
+  },
+  "footer": {
+    "text": "Powered by Deep Favicon Fetcher Backend with Puppeteer • Supports all modern icon standards"
+  }
+}
+

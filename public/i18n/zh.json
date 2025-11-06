@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "AI Favicon 提取器",
+    "powered_by": "由深度爬虫驱动"
+  },
+  "meta": {
+    "title": "Favicon 提取器 - 最全面的工具",
+    "description": "通过深度爬取从任何网站提取所有 favicon。支持 HTML、Web Manifest、BrowserConfig，并提供智能分析和下载选项。",
+    "og_title": "Favicon 提取器 - 提取网站图标"
+  },
+  "header": {
+    "title": "AI Favicon 提取器",
+    "subtitle": "最全面的 favicon 提取工具"
+  },
+  "form": {
+    "placeholder": "输入网站 URL（例如：https://github.com）",
+    "button_extract": "提取",
+    "button_extracting": "正在提取...",
+    "try_label": "试试：",
+    "error_empty": "请输入 URL",
+    "error_invalid": "请输入有效的 URL（包括 http:// 或 https://）"
+  },
+  "results": {
+    "found": "找到 {count} 个图标",
+    "extracted_from": "提取自 {domain}",
+    "download_all": "下载所有为 ZIP",
+    "downloading": "正在准备 ZIP...（{current}/{total}）",
+    "icon_collection": "图标集合"
+  },
+  "warnings": {
+    "captcha_title": "使用 API 备用方案",
+    "captcha_message": "此网站具有反机器人保护。我们正在使用 Google S2 和 DuckDuckGo favicon API 来提供高质量的图标。",
+    "no_icons_title": "未找到图标",
+    "no_icons_message": "未检测到此网站的 favicon。这可能是因为：网站没有 favicon，或者需要 JavaScript 渲染。"
+  },
+  "analysis": {
+    "title": "智能分析",
+    "excellent": "优秀",
+    "good": "良好",
+    "needs_improvement": "需要改进",
+    "total_icons": "图标总数",
+    "svg_format": "SVG 格式",
+    "web_manifest": "Web Manifest",
+    "best_practices": "检测到的最佳实践",
+    "improvements": "改进建议",
+    "feature_coverage": "功能覆盖",
+    "apple_touch_icon": "Apple Touch 图标",
+    "apple_touch_icon_desc": "用于 iOS 主屏幕",
+    "high_resolution": "高分辨率（512x512+）",
+    "high_resolution_desc": "用于 PWA 和现代显示器",
+    "svg_format_desc": "可缩放矢量图形",
+    "web_manifest_desc": "PWA 配置",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Windows 磁贴图像"
+  },
+  "icon_card": {
+    "download": "下载",
+    "downloading": "正在下载...",
+    "copy_url": "复制 URL",
+    "open_new_tab": "在新标签页中打开"
+  },
+  "features": {
+    "title": "从任何网站提取所有 Favicon",
+    "description": "我们的深度爬虫提取所有图标格式，包括 HTML、Web Manifest、BrowserConfig，并提供智能分析和下载选项。",
+    "deep_extraction": "深度提取",
+    "deep_extraction_desc": "查找所有图标格式和尺寸",
+    "visual_matrix": "可视化矩阵",
+    "visual_matrix_desc": "下载前预览所有图标",
+    "one_click_zip": "一键 ZIP",
+    "one_click_zip_desc": "一次下载所有内容",
+    "smart_analysis": "智能分析",
+    "smart_analysis_desc": "获取见解和建议"
+  },
+  "footer": {
+    "text": "由 Puppeteer 深度 Favicon 获取器后端驱动 • 支持所有现代图标标准"
+  }
+}
+

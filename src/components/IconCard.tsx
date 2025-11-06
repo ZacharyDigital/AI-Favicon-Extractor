@@ -5,6 +5,7 @@ import { Download, Copy, Check, ExternalLink } from 'lucide-react';
 import type { DownloadableIcon } from '@/types/favicon';
 import { downloadSingleIcon, copyIconUrl } from '@/lib/download';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 
 interface IconCardProps {
   icon: DownloadableIcon;
@@ -12,6 +13,7 @@ interface IconCardProps {
 }
 
 export function IconCard({ icon, websiteUrl }: IconCardProps) {
+  const t = useTranslations();
   const [isDownloading, setIsDownloading] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -112,13 +114,13 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
           )}
         >
           <Download className="h-4 w-4" />
-          {isDownloading ? 'Downloading...' : 'Download'}
+          {isDownloading ? t('icon_card.downloading') : t('icon_card.download')}
         </button>
 
         <button
           onClick={handleCopyUrl}
           className="flex items-center justify-center rounded-lg border border-gray-300 px-3 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-          title="Copy URL"
+          title={t('icon_card.copy_url')}
         >
           {isCopied ? (
             <Check className="h-4 w-4 text-green-600" />
@@ -132,7 +134,7 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center rounded-lg border border-gray-300 px-3 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-          title="Open in new tab"
+          title={t('icon_card.open_new_tab')}
         >
           <ExternalLink className="h-4 w-4" />
         </a>

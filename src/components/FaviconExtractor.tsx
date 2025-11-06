@@ -8,8 +8,10 @@ import { fetchFavicons } from '@/lib/api';
 import { analyzeFavicons, prepareIconsForDownload, isValidUrl, getDomainFromUrl } from '@/lib/utils';
 import { downloadAllIconsAsZip } from '@/lib/download';
 import type { FaviconResponse, DownloadableIcon, IconAnalysis } from '@/types/favicon';
+import { useTranslations } from 'next-intl';
 
 export function FaviconExtractor() {
+  const t = useTranslations();
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -23,12 +25,12 @@ export function FaviconExtractor() {
     e.preventDefault();
     
     if (!url.trim()) {
-      setError('Please enter a URL');
+      setError(t('form.error_empty'));
       return;
     }
 
     if (!isValidUrl(url)) {
-      setError('Please enter a valid URL (including http:// or https://)');
+      setError(t('form.error_invalid'));
       return;
     }
 
@@ -90,7 +92,7 @@ export function FaviconExtractor() {
                 type="text"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
-                placeholder="Enter website URL (e.g., https://github.com)"
+                placeholder={t('form.placeholder')}
                 className="w-full rounded-xl border-2 border-gray-300 bg-white px-5 py-4 pr-32 text-lg shadow-sm transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                 disabled={loading}
               />
@@ -102,12 +104,12 @@ export function FaviconExtractor() {
                 {loading ? (
                   <>
                     <Loader2 className="h-5 w-5 animate-spin" />
-                    Extracting...
+                    {t('form.button_extracting')}
                   </>
                 ) : (
                   <>
                     <Search className="h-5 w-5" />
-                    Extract
+                    {t('form.button_extract')}
                   </>
                 )}
               </button>
@@ -115,7 +117,7 @@ export function FaviconExtractor() {
 
             {/* Example URLs */}
             <div className="flex flex-wrap gap-2">
-              <span className="text-sm text-gray-600">Try:</span>
+              <span className="text-sm text-gray-600">{t('form.try_label')}</span>
               {['https://github.com', 'https://twitter.com', 'https://stackoverflow.com'].map((example) => (
                 <button
                   key={example}
@@ -148,10 +150,9 @@ export function FaviconExtractor() {
           <div className="mb-6 flex items-start gap-3 rounded-xl border border-blue-200 bg-blue-50 p-4 text-blue-800">
             <AlertCircle className="h-5 w-5 flex-shrink-0" />
             <div>
-              <p className="font-medium">Using API Fallback</p>
+              <p className="font-medium">{t('warnings.captcha_title')}</p>
               <p className="text-sm">
-                This website has anti-bot protection. We&apos;re using Google S2 and DuckDuckGo favicon APIs 
-                to provide high-quality icons instead.
+                {t('warnings.captcha_message')}
               </p>
             </div>
           </div>
@@ -164,10 +165,9 @@ export function FaviconExtractor() {
           <div className="mb-6 flex items-start gap-3 rounded-xl border border-yellow-200 bg-yellow-50 p-4 text-yellow-800">
             <AlertCircle className="h-5 w-5 flex-shrink-0" />
             <div>
-              <p className="font-medium">No Icons Found</p>
+              <p className="font-medium">{t('warnings.no_icons_title')}</p>
               <p className="text-sm">
-                No favicons were detected for this website. This might be because:
-                the site doesn&apos;t have a favicon, or it requires JavaScript rendering.
+                {t('warnings.no_icons_message')}
               </p>
             </div>
           </div>
@@ -181,10 +181,13 @@ export function FaviconExtractor() {
           <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
             <div>
               <h2 className="text-lg font-semibold text-gray-900">
-                Found {data.found.length} icon{data.found.length !== 1 ? 's' : ''}
+                {t('results.found', { 
+                  count: data.found.length, 
+                  plural: data.found.length !== 1 ? 's' : '' 
+                })}
               </h2>
               <p className="text-sm text-gray-600">
-                Extracted from {getDomainFromUrl(url)}
+                {t('results.extracted_from', { domain: getDomainFromUrl(url) })}
               </p>
             </div>
             <button
@@ -195,12 +198,15 @@ export function FaviconExtractor() {
               {downloadingZip ? (
                 <>
                   <Loader2 className="h-5 w-5 animate-spin" />
-                  Preparing ZIP... ({downloadProgress.current}/{downloadProgress.total})
+                  {t('results.downloading', { 
+                    current: downloadProgress.current, 
+                    total: downloadProgress.total 
+                  })}
                 </>
               ) : (
                 <>
                   <Download className="h-5 w-5" />
-                  Download All as ZIP
+                  {t('results.download_all')}
                 </>
               )}
             </button>
@@ -215,7 +221,7 @@ export function FaviconExtractor() {
 
           {/* Icon Grid */}
           <div>
-            <h2 className="mb-4 text-xl font-bold text-gray-900">Icon Collection</h2>
+            <h2 className="mb-4 text-xl font-bold text-gray-900">{t('results.icon_collection')}</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {icons.map((icon, index) => (
                 <div
