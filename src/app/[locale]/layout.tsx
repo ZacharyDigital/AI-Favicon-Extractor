@@ -1,26 +1,30 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
-import { NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { getMessagesForLocale } from "@/i18n";
-import { appConfig, type LocaleType } from "@/config";
-import "./globals.css";
+import type { Metadata, Viewport } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import Script from 'next/script';
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { getMessagesForLocale } from '@/i18n';
+import { appConfig, type LocaleType } from '@/config';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://favicon-extractor.app';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
 
@@ -28,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: {
       default: t('meta.title'),
-      template: "%s | Favicon Extractor"
+      template: '%s | Favicon Extractor',
     },
     description: t('meta.description'),
     keywords: [
@@ -88,13 +92,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       canonical: siteUrl,
       languages: {
-        'en': `${siteUrl}`,
-        'zh': `${siteUrl}/zh`,
-        'es': `${siteUrl}/es`,
-        'de': `${siteUrl}/de`,
-        'fr': `${siteUrl}/fr`,
-        'ja': `${siteUrl}/ja`,
-      }
+        en: `${siteUrl}`,
+        zh: `${siteUrl}/zh`,
+        es: `${siteUrl}/es`,
+        de: `${siteUrl}/de`,
+        fr: `${siteUrl}/fr`,
+        ja: `${siteUrl}/ja`,
+      },
     },
     manifest: '/manifest.webmanifest',
     category: 'technology',
@@ -106,9 +110,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         { url: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
         { url: '/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' },
       ],
-      apple: [
-        { url: '/apple-touch-icon.png', type: 'image/png' }
-      ],
+      apple: [{ url: '/apple-touch-icon.png', type: 'image/png' }],
     },
   };
 }
@@ -121,7 +123,7 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -138,9 +140,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KVW4H6PX"
@@ -150,19 +150,19 @@ export default async function RootLayout({
             title="Google Tag Manager"
           ></iframe>
         </noscript>
-        
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
 
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-KVW4H6PX');
-          `}
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KVW4H6PX');
+        `}
         </Script>
       </body>
     </html>

@@ -32,7 +32,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
   };
 
   return (
-    <Card className="border-gray-200/80 bg-white/95 backdrop-blur-sm shadow-sm hover:shadow-md hover:border-blue-200/50 transition-all duration-200">
+    <Card className="border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-200">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">{t('analysis.title')}</CardTitle>
@@ -134,7 +134,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
         )}
 
         {/* Feature Coverage */}
-        <div className="mt-6 border-t border-gray-200 pt-6">
+        <div className="mt-6 border-t border-gray-300 pt-6">
           <h3 className="mb-3 text-sm font-semibold text-gray-900">
             {t('analysis.feature_coverage')}
           </h3>
@@ -181,7 +181,7 @@ function FeatureItem({
   description: string;
 }) {
   return (
-    <div className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 p-3">
+    <div className="flex items-center justify-between rounded-lg border border-gray-300 bg-gray-50 p-3">
       <div>
         <div className="text-sm font-medium text-gray-900">{label}</div>
         <div className="text-xs text-gray-500">{description}</div>

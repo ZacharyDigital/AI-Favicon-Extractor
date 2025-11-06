@@ -1,119 +1,140 @@
 @import "tailwindcss";
 
 @theme {
-  /* 主色调 - 蓝色到紫色渐变 */
-  --color-primary: 59 130 246; /* blue-500 */
-  --color-primary-foreground: 255 255 255;
+  /* 使用 oklch() 现代 CSS 颜色函数定义主题颜色 */
+  --color-primary: oklch(0.488 0.243 264.376);
+  --color-primary-foreground: oklch(0.97 0.014 254.604);
   
-  /* 次要色调 */
-  --color-secondary: 241 245 249; /* slate-100 */
-  --color-secondary-foreground: 15 23 42; /* slate-900 */
+  --color-secondary: oklch(0.967 0.001 286.375);
+  --color-secondary-foreground: oklch(0.21 0.006 285.885);
   
-  /* 背景和前景 */
-  --color-background: 255 255 255;
-  --color-foreground: 15 23 42; /* slate-900 */
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.141 0.005 285.823);
   
-  /* 卡片 */
-  --color-card: 255 255 255;
-  --color-card-foreground: 15 23 42;
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.141 0.005 285.823);
   
-  /* 弹出层 */
-  --color-popover: 255 255 255;
-  --color-popover-foreground: 15 23 42;
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.141 0.005 285.823);
   
-  /* 输入框 */
-  --color-input: 226 232 240; /* slate-200 */
-  --color-ring: 59 130 246; /* blue-500 */
+  --color-input: oklch(0.92 0.004 286.32);
+  --color-ring: oklch(0.708 0 0);
   
-  /* 强调色 */
-  --color-accent: 241 245 249; /* slate-100 */
-  --color-accent-foreground: 15 23 42;
+  --color-accent: oklch(0.967 0.001 286.375);
+  --color-accent-foreground: oklch(0.21 0.006 285.885);
   
-  /* 破坏性操作 */
-  --color-destructive: 239 68 68; /* red-500 */
-  --color-destructive-foreground: 255 255 255;
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.97 0.014 254.604);
   
-  /* 边框 - 使用更柔和的 gray-100/200 以符合现代设计 */
-  --color-border: 229 231 235; /* gray-200 - 平衡可见性和柔和度 */
-  --color-muted: 249 250 251; /* gray-50 */
-  --color-muted-foreground: 107 114 128; /* gray-500 */
+  --color-border: oklch(0.92 0.004 286.32);
+  --color-muted: oklch(0.967 0.001 286.375);
+  --color-muted-foreground: oklch(0.552 0.016 285.938);
   
-  /* 圆角 */
-  --radius: 0.5rem;
+  --radius: 0.65rem;
 }
 
 :root {
-  /* shadcn/ui CSS 变量 - 保留原有蓝色-紫色配色方案 */
-  --background: 255 255 255;
-  --foreground: 15 23 42;
-  
-  --card: 255 255 255;
-  --card-foreground: 15 23 42;
-  
-  --popover: 255 255 255;
-  --popover-foreground: 15 23 42;
-  
-  --primary: 59 130 246; /* blue-500 - 匹配原有配色 */
-  --primary-foreground: 255 255 255;
-  
-  --secondary: 241 245 249; /* slate-100 */
-  --secondary-foreground: 15 23 42;
-  
-  --muted: 241 245 249; /* slate-100 */
-  --muted-foreground: 100 116 139; /* slate-500 */
-  
-  --accent: 241 245 249; /* slate-100 */
-  --accent-foreground: 15 23 42;
-  
-  --destructive: 239 68 68; /* red-500 */
-  --destructive-foreground: 255 255 255;
-  
-  --border: 229 231 235; /* gray-200 - 平衡可见性和柔和度 */
-  --input: 229 231 235; /* gray-200 - 输入框边框 */
-  --ring: 59 130 246; /* blue-500 - 匹配原有配色 */
-  
-  --radius: 0.5rem;
+  /* shadcn/ui 配色方案 - 使用 oklch() 现代 CSS 颜色函数 */
+  --radius: 0.65rem;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+
+  --primary: oklch(0.488 0.243 264.376);
+  --primary-foreground: oklch(0.97 0.014 254.604);
+
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.97 0.014 254.604);
+
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.708 0 0);
+
+  --chart-1: oklch(0.809 0.105 251.813);
+  --chart-2: oklch(0.623 0.214 259.815);
+  --chart-3: oklch(0.546 0.245 262.881);
+  --chart-4: oklch(0.488 0.243 264.376);
+  --chart-5: oklch(0.424 0.199 265.638);
+
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.546 0.245 262.881);
+  --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: 2 6 23; /* slate-950 */
-    --foreground: 248 250 252; /* slate-50 */
-    
-    --card: 2 6 23;
-    --card-foreground: 248 250 252;
-    
-    --popover: 2 6 23;
-    --popover-foreground: 248 250 252;
-    
-    --primary: 59 130 246; /* blue-500 */
-    --primary-foreground: 255 255 255;
-    
-    --secondary: 30 41 59; /* slate-800 */
-    --secondary-foreground: 248 250 252;
-    
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184; /* slate-400 */
-    
-    --accent: 30 41 59;
-    --accent-foreground: 248 250 252;
-    
-    --destructive: 239 68 68;
-    --destructive-foreground: 255 255 255;
-    
-    --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 59 130 246;
+    --background: oklch(0.141 0.005 285.823);
+    --foreground: oklch(0.985 0 0);
+
+    --card: oklch(0.21 0.006 285.885);
+    --card-foreground: oklch(0.985 0 0);
+
+    --popover: oklch(0.21 0.006 285.885);
+    --popover-foreground: oklch(0.985 0 0);
+
+    --primary: oklch(0.488 0.243 264.376);
+    --primary-foreground: oklch(0.97 0.014 254.604);
+
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+
+    --muted: oklch(0.274 0.006 286.033);
+    --muted-foreground: oklch(0.705 0.015 286.067);
+
+    --accent: oklch(0.274 0.006 286.033);
+    --accent-foreground: oklch(0.985 0 0);
+
+    --destructive: oklch(0.704 0.191 22.216);
+    --destructive-foreground: oklch(0.97 0.014 254.604);
+
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+
+    --chart-1: oklch(0.809 0.105 251.813);
+    --chart-2: oklch(0.623 0.214 259.815);
+    --chart-3: oklch(0.546 0.245 262.881);
+    --chart-4: oklch(0.488 0.243 264.376);
+    --chart-5: oklch(0.424 0.199 265.638);
+
+    --sidebar: oklch(0.21 0.006 285.885);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.623 0.214 259.815);
+    --sidebar-primary-foreground: oklch(0.97 0.014 254.604);
+    --sidebar-accent: oklch(0.274 0.006 286.033);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.439 0 0);
   }
 }
 
 * {
-  border-color: hsl(var(--border));
+  border-color: var(--border);
 }
 
 body {
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
