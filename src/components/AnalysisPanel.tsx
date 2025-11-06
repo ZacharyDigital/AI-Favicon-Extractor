@@ -32,8 +32,8 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
   };
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="border-gray-200 bg-white shadow-sm">
+      <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">{t('analysis.title')}</CardTitle>
           <div className="flex items-center gap-3">

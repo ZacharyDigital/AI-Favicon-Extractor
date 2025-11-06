@@ -58,7 +58,7 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
   };
 
   return (
-    <Card className="group transition-all hover:shadow-md">
+    <Card className="group transition-all hover:shadow-md border-gray-200 bg-white shadow-sm">
       <CardContent className="p-4">
         {/* Icon Preview */}
         <div className="mb-3 flex items-center justify-center rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 p-6">
@@ -114,7 +114,12 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
 
         {/* Action Buttons */}
         <div className="mt-4 flex gap-2">
-          <Button onClick={handleDownload} disabled={isDownloading} className="flex-1" size="sm">
+          <Button
+            onClick={handleDownload}
+            disabled={isDownloading}
+            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
+            size="sm"
+          >
             <Download className="h-4 w-4" />
             {isDownloading ? t('icon_card.downloading') : t('icon_card.download')}
           </Button>
@@ -124,11 +129,18 @@ export function IconCard({ icon, websiteUrl }: IconCardProps) {
             variant="outline"
             size="icon"
             title={t('icon_card.copy_url')}
+            className="border-gray-200 hover:bg-gray-50 hover:border-gray-300"
           >
             {isCopied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
           </Button>
 
-          <Button asChild variant="outline" size="icon" title={t('icon_card.open_new_tab')}>
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            title={t('icon_card.open_new_tab')}
+            className="border-gray-200 hover:bg-gray-50 hover:border-gray-300"
+          >
             <a href={icon.href} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4" />
             </a>

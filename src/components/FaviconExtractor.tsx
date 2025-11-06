@@ -106,14 +106,14 @@ export function FaviconExtractor() {
                 {...form.register('url')}
                 type="text"
                 placeholder={t('form.placeholder')}
-                className="w-full pr-32 text-lg h-14 rounded-xl"
+                className="w-full pr-32 text-lg h-14 rounded-xl border-2 border-gray-200 bg-white shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                 disabled={form.formState.isSubmitting}
               />
               <Button
                 type="submit"
                 disabled={form.formState.isSubmitting}
                 size="lg"
-                className="absolute right-2 top-1/2 -translate-y-1/2"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white shadow-sm border-0"
               >
                 {form.formState.isSubmitting ? (
                   <>
@@ -140,7 +140,7 @@ export function FaviconExtractor() {
                     variant="outline"
                     size="sm"
                     onClick={() => handleTryExample(example)}
-                    className="rounded-full"
+                    className="rounded-full border-gray-200 hover:bg-gray-50 hover:border-gray-300"
                   >
                     {getDomainFromUrl(example)}
                   </Button>
@@ -192,7 +192,7 @@ export function FaviconExtractor() {
       {data && icons.length > 0 && (
         <div className="space-y-8">
           {/* Action Bar */}
-          <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
             <div>
               <h2 className="text-lg font-semibold text-gray-900">
                 {t('results.found', {
@@ -208,7 +208,7 @@ export function FaviconExtractor() {
               onClick={handleDownloadAll}
               disabled={downloadingZip}
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-lg"
             >
               {downloadingZip ? (
                 <>
