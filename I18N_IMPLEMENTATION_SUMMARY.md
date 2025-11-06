@@ -114,6 +114,14 @@ const nextConfig: NextConfig = {
 export default withNextIntl(nextConfig);
 ```
 
+## 🌐 当前支持语言
+
+**已实现**: 2 种语言
+- 🇬🇧 English (en) - 默认语言
+- 🇨🇳 中文 (zh)
+
+**可扩展**: 参考 [HOW_TO_ADD_LANGUAGES.md](./HOW_TO_ADD_LANGUAGES.md) 添加更多语言
+
 ## 🚀 核心特性
 
 ### 1. 智能回退机制
