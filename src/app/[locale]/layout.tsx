@@ -86,9 +86,30 @@ export async function generateMetadata({
       images: [`${siteUrl}/twitter-image.png`],
       creator: t('meta.twitter_creator'),
     },
-    verification: {
-      google: process.env.GOOGLE_VERIFICATION_CODE || undefined,
-    },
+    verification: (() => {
+      const verification: Record<string, string> = {};
+
+      if (process.env.GOOGLE_VERIFICATION_CODE) {
+        verification.google = process.env.GOOGLE_VERIFICATION_CODE;
+      }
+      if (process.env.YANDEX_VERIFICATION_CODE) {
+        verification.yandex = process.env.YANDEX_VERIFICATION_CODE;
+      }
+      if (process.env.YAHOO_VERIFICATION_CODE) {
+        verification.yahoo = process.env.YAHOO_VERIFICATION_CODE;
+      }
+      if (process.env.BING_VERIFICATION_CODE) {
+        verification['msvalidate.01'] = process.env.BING_VERIFICATION_CODE;
+      }
+      if (process.env.BAIDU_VERIFICATION_CODE) {
+        verification['baidu-site-verification'] = process.env.BAIDU_VERIFICATION_CODE;
+      }
+      if (process.env.NAVER_VERIFICATION_CODE) {
+        verification['naver-site-verification'] = process.env.NAVER_VERIFICATION_CODE;
+      }
+
+      return Object.keys(verification).length > 0 ? verification : undefined;
+    })(),
     alternates: {
       canonical: locale === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       languages: Object.fromEntries(
@@ -100,6 +121,19 @@ export async function generateMetadata({
     },
     manifest: '/manifest.webmanifest',
     category: 'technology',
+    applicationName: 'Favicon Extractor',
+    formatDetection: {
+      telephone: false,
+      date: false,
+      address: false,
+      email: false,
+      url: false,
+    },
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'default',
+      title: 'Favicon Extractor',
+    },
     icons: {
       icon: [
         { url: '/favicon.svg', type: 'image/svg+xml' },

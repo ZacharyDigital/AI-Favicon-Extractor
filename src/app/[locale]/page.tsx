@@ -52,11 +52,32 @@ export async function generateMetadata({
       title: t('meta.og_title') || t('meta.title'),
       description: t('meta.description'),
       siteName: 'Favicon Extractor',
+      images: [
+        {
+          url: `${siteUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: 'Favicon Extractor - Extract website icons',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('meta.title'),
       description: t('meta.description'),
+      images: [`${siteUrl}/twitter-image.png`],
+      creator: t('meta.twitter_creator'),
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
