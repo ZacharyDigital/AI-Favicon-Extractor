@@ -1,5 +1,5 @@
 // 国际化配置中心
-const locales = ['en', 'zh'] as const;
+const locales = ['en', 'zh', 'es', 'ja', 'ko', 'vi', 'fr', 'ru', 'de', 'it', 'pt'] as const;
 const defaultLocale = 'en' as const;
 
 export type LocaleType = (typeof locales)[number];
@@ -22,9 +22,13 @@ export const appConfig = {
   // 注意：API 地址不应在代码中硬编码，必须通过环境变量 NEXT_PUBLIC_API_URL 配置
   // 开发环境默认值仅用于本地开发，生产环境必须通过环境变量配置
   // 如果未配置且不是开发环境，使用空字符串（需要确保环境变量已配置）
-  apiUrl:
-    process.env.NEXT_PUBLIC_API_URL ||
-    (process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : ''),
+  // 自动移除尾部斜杠，避免 URL 拼接时出现双斜杠
+  apiUrl: (() => {
+    const url =
+      process.env.NEXT_PUBLIC_API_URL ||
+      (process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : '');
+    return url ? url.replace(/\/+$/, '') : '';
+  })(),
 
   // 国际化配置
   i18n: {
@@ -33,6 +37,29 @@ export const appConfig = {
     labels: {
       en: 'English',
       zh: '中文',
+      es: 'Español',
+      ja: '日本語',
+      ko: '한국어',
+      vi: 'Tiếng Việt',
+      fr: 'Français',
+      ru: 'Русский',
+      de: 'Deutsch',
+      it: 'Italiano',
+      pt: 'Português',
+    } as Record<LocaleType, string>,
+    // 国旗 Emoji 映射
+    flags: {
+      en: '🇺🇸',
+      zh: '🇨🇳',
+      es: '🇪🇸',
+      ja: '🇯🇵',
+      ko: '🇰🇷',
+      vi: '🇻🇳',
+      fr: '🇫🇷',
+      ru: '🇷🇺',
+      de: '🇩🇪',
+      it: '🇮🇹',
+      pt: '🇵🇹',
     } as Record<LocaleType, string>,
   },
 

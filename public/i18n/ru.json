@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "Извлекатель Favicon ИИ",
+    "powered_by": "Работает на Deep Crawler"
+  },
+  "meta": {
+    "title": "Извлекатель Favicon - Самый полный инструмент",
+    "description": "Извлекайте все favicon с любого веб-сайта с помощью глубокого сканирования. Поддерживает HTML, Web Manifest, BrowserConfig и предоставляет интеллектуальный анализ с опциями загрузки.",
+    "og_title": "Извлекатель Favicon - Извлечение иконок веб-сайта",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "Извлекатель AIFavicon",
+    "subtitle": "Самый полный инструмент для извлечения favicon"
+  },
+  "form": {
+    "placeholder": "Введите URL веб-сайта (например: https://github.com)",
+    "button_extract": "Извлечь",
+    "button_extracting": "Извлечение...",
+    "try_label": "Попробовать:",
+    "error_empty": "Пожалуйста, введите URL",
+    "error_invalid": "Пожалуйста, введите действительный URL (включая http:// или https://)"
+  },
+  "results": {
+    "found": "Найдено {count} иконок",
+    "extracted_from": "Извлечено с {domain}",
+    "download_all": "Скачать Все как ZIP",
+    "downloading": "Подготовка ZIP... ({current}/{total})",
+    "icon_collection": "Коллекция Иконок"
+  },
+  "warnings": {
+    "captcha_title": "Использование Резервного API",
+    "captcha_message": "Этот веб-сайт имеет защиту от ботов. Мы используем API favicon Google S2 и DuckDuckGo для предоставления высококачественных иконок.",
+    "no_icons_title": "Иконки Не Найдены",
+    "no_icons_message": "Для этого веб-сайта не обнаружено favicon. Это может быть связано с тем, что: у сайта нет favicon, или требуется рендеринг JavaScript."
+  },
+  "analysis": {
+    "title": "Интеллектуальный Анализ",
+    "excellent": "Отлично",
+    "good": "Хорошо",
+    "needs_improvement": "Требуется Улучшение",
+    "total_icons": "Всего Иконок",
+    "svg_format": "Формат SVG",
+    "web_manifest": "Web Manifest",
+    "best_practices": "Обнаружены Лучшие Практики",
+    "improvements": "Предложения по Улучшению",
+    "feature_coverage": "Покрытие Функций",
+    "apple_touch_icon": "Иконка Apple Touch",
+    "apple_touch_icon_desc": "Для главного экрана iOS",
+    "high_resolution": "Высокое Разрешение (512x512+)",
+    "high_resolution_desc": "Для PWA и современных дисплеев",
+    "svg_format_desc": "Масштабируемая векторная графика",
+    "web_manifest_desc": "Конфигурация PWA",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Изображения плиток Windows"
+  },
+  "icon_card": {
+    "download": "Скачать",
+    "downloading": "Загрузка...",
+    "copy_url": "Копировать URL",
+    "open_new_tab": "Открыть в новой вкладке"
+  },
+  "features": {
+    "title": "Извлечь Все Favicon с Любого Веб-сайта",
+    "description": "Наш глубокий сканер извлекает все форматы иконок, включая HTML, Web Manifest, BrowserConfig и предоставляет интеллектуальный анализ с опциями загрузки.",
+    "deep_extraction": "Глубокое Извлечение",
+    "deep_extraction_desc": "Находит все форматы и размеры иконок",
+    "visual_matrix": "Визуальная Матрица",
+    "visual_matrix_desc": "Предпросмотр всех иконок перед загрузкой",
+    "one_click_zip": "ZIP в Один Клик",
+    "one_click_zip_desc": "Скачать все за раз",
+    "smart_analysis": "Умный Анализ",
+    "smart_analysis_desc": "Получите аналитику и рекомендации"
+  },
+  "footer": {
+    "text": "Работает на Deep Favicon Fetcher Backend с Puppeteer • Поддерживает все современные стандарты иконок"
+  }
+}

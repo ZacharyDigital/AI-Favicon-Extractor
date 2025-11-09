@@ -66,7 +66,22 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      locale: (() => {
+        const localeMap: Record<string, string> = {
+          en: 'en_US',
+          zh: 'zh_CN',
+          es: 'es_ES',
+          ja: 'ja_JP',
+          ko: 'ko_KR',
+          vi: 'vi_VN',
+          fr: 'fr_FR',
+          ru: 'ru_RU',
+          de: 'de_DE',
+          it: 'it_IT',
+          pt: 'pt_PT',
+        };
+        return localeMap[locale] || 'en_US';
+      })(),
       url: locale === appConfig.i18n.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       title: t('meta.og_title'),
       description: t('meta.description'),

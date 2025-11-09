@@ -102,7 +102,7 @@ export async function verifyIconUrl(url: string): Promise<boolean> {
       }
     );
     return response.data.valid;
-  } catch (error) {
+  } catch {
     return false;
   }
 }
@@ -116,7 +116,7 @@ export async function checkApiHealth(): Promise<boolean> {
       timeout: 5000,
     });
     return response.data.status === 'ok';
-  } catch (error) {
+  } catch {
     return false;
   }
 }

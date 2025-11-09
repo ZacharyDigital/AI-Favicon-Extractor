@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "Trình Trích Xuất Favicon AI",
+    "powered_by": "Được hỗ trợ bởi Deep Crawler"
+  },
+  "meta": {
+    "title": "Trình Trích Xuất Favicon - Công Cụ Toàn Diện Nhất",
+    "description": "Trích xuất tất cả favicon từ bất kỳ trang web nào với trình thu thập dữ liệu sâu. Hỗ trợ HTML, Web Manifest, BrowserConfig và cung cấp phân tích thông minh với các tùy chọn tải xuống.",
+    "og_title": "Trình Trích Xuất Favicon - Trích xuất biểu tượng trang web",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "Trình Trích Xuất AIFavicon",
+    "subtitle": "Công cụ trích xuất favicon toàn diện nhất"
+  },
+  "form": {
+    "placeholder": "Nhập URL trang web (ví dụ: https://github.com)",
+    "button_extract": "Trích xuất",
+    "button_extracting": "Đang trích xuất...",
+    "try_label": "Thử:",
+    "error_empty": "Vui lòng nhập URL",
+    "error_invalid": "Vui lòng nhập URL hợp lệ (bao gồm http:// hoặc https://)"
+  },
+  "results": {
+    "found": "Tìm thấy {count} biểu tượng",
+    "extracted_from": "Trích xuất từ {domain}",
+    "download_all": "Tải Tất Cả dưới dạng ZIP",
+    "downloading": "Đang chuẩn bị ZIP... ({current}/{total})",
+    "icon_collection": "Bộ Sưu Tập Biểu Tượng"
+  },
+  "warnings": {
+    "captcha_title": "Sử dụng API Dự phòng",
+    "captcha_message": "Trang web này có bảo vệ chống bot. Chúng tôi đang sử dụng API favicon của Google S2 và DuckDuckGo để cung cấp biểu tượng chất lượng cao.",
+    "no_icons_title": "Không Tìm Thấy Biểu Tượng",
+    "no_icons_message": "Không phát hiện favicon cho trang web này. Điều này có thể do: trang web không có favicon, hoặc cần render JavaScript."
+  },
+  "analysis": {
+    "title": "Phân Tích Thông Minh",
+    "excellent": "Xuất sắc",
+    "good": "Tốt",
+    "needs_improvement": "Cần Cải Thiện",
+    "total_icons": "Tổng Số Biểu Tượng",
+    "svg_format": "Định Dạng SVG",
+    "web_manifest": "Web Manifest",
+    "best_practices": "Thực Hành Tốt Nhất Đã Phát Hiện",
+    "improvements": "Đề Xuất Cải Thiện",
+    "feature_coverage": "Phạm Vi Tính Năng",
+    "apple_touch_icon": "Biểu Tượng Apple Touch",
+    "apple_touch_icon_desc": "Cho màn hình chính iOS",
+    "high_resolution": "Độ Phân Giải Cao (512x512+)",
+    "high_resolution_desc": "Cho PWA và màn hình hiện đại",
+    "svg_format_desc": "Đồ họa vector có thể mở rộng",
+    "web_manifest_desc": "Cấu hình PWA",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Hình ảnh tile Windows"
+  },
+  "icon_card": {
+    "download": "Tải xuống",
+    "downloading": "Đang tải xuống...",
+    "copy_url": "Sao chép URL",
+    "open_new_tab": "Mở trong tab mới"
+  },
+  "features": {
+    "title": "Trích Xuất Tất Cả Favicon Từ Bất Kỳ Trang Web Nào",
+    "description": "Trình thu thập dữ liệu sâu của chúng tôi trích xuất tất cả các định dạng biểu tượng bao gồm HTML, Web Manifest, BrowserConfig và cung cấp phân tích thông minh với các tùy chọn tải xuống.",
+    "deep_extraction": "Trích Xuất Sâu",
+    "deep_extraction_desc": "Tìm tất cả định dạng và kích thước biểu tượng",
+    "visual_matrix": "Ma Trận Hình Ảnh",
+    "visual_matrix_desc": "Xem trước tất cả biểu tượng trước khi tải xuống",
+    "one_click_zip": "ZIP Một Cú Nhấp",
+    "one_click_zip_desc": "Tải xuống tất cả cùng một lúc",
+    "smart_analysis": "Phân Tích Thông Minh",
+    "smart_analysis_desc": "Nhận thông tin chi tiết và đề xuất"
+  },
+  "footer": {
+    "text": "Được hỗ trợ bởi Deep Favicon Fetcher Backend với Puppeteer • Hỗ trợ tất cả các tiêu chuẩn biểu tượng hiện đại"
+  }
+}

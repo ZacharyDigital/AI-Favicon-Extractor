@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "Extrator de Favicon IA",
+    "powered_by": "Alimentado por Deep Crawler"
+  },
+  "meta": {
+    "title": "Extrator de Favicon - A Ferramenta Mais Completa",
+    "description": "Extraia todos os favicons de qualquer site com rastreamento profundo. Suporta HTML, Web Manifest, BrowserConfig e fornece análise inteligente com opções de download.",
+    "og_title": "Extrator de Favicon - Extrair ícones do site",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "Extrator AIFavicon",
+    "subtitle": "A ferramenta de extração de favicon mais completa"
+  },
+  "form": {
+    "placeholder": "Digite a URL do site (ex.: https://github.com)",
+    "button_extract": "Extrair",
+    "button_extracting": "Extraindo...",
+    "try_label": "Tente:",
+    "error_empty": "Por favor, digite uma URL",
+    "error_invalid": "Por favor, digite uma URL válida (incluindo http:// ou https://)"
+  },
+  "results": {
+    "found": "Encontrados {count} ícone{plural}",
+    "extracted_from": "Extraídos de {domain}",
+    "download_all": "Baixar Tudo como ZIP",
+    "downloading": "Preparando ZIP... ({current}/{total})",
+    "icon_collection": "Coleção de Ícones"
+  },
+  "warnings": {
+    "captcha_title": "Usando API de Fallback",
+    "captcha_message": "Este site tem proteção anti-bot. Estamos usando as APIs de favicon do Google S2 e DuckDuckGo para fornecer ícones de alta qualidade.",
+    "no_icons_title": "Nenhum Ícone Encontrado",
+    "no_icons_message": "Nenhum favicon detectado para este site. Isso pode ser porque: o site não tem um favicon, ou requer renderização JavaScript."
+  },
+  "analysis": {
+    "title": "Análise Inteligente",
+    "excellent": "Excelente",
+    "good": "Bom",
+    "needs_improvement": "Precisa de Melhoria",
+    "total_icons": "Ícones Totais",
+    "svg_format": "Formato SVG",
+    "web_manifest": "Web Manifest",
+    "best_practices": "Melhores Práticas Detectadas",
+    "improvements": "Sugestões de Melhoria",
+    "feature_coverage": "Cobertura de Recursos",
+    "apple_touch_icon": "Ícone Apple Touch",
+    "apple_touch_icon_desc": "Para a tela inicial do iOS",
+    "high_resolution": "Alta Resolução (512x512+)",
+    "high_resolution_desc": "Para PWA e telas modernas",
+    "svg_format_desc": "Gráficos vetoriais escaláveis",
+    "web_manifest_desc": "Configuração PWA",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Imagens de bloco do Windows"
+  },
+  "icon_card": {
+    "download": "Baixar",
+    "downloading": "Baixando...",
+    "copy_url": "Copiar URL",
+    "open_new_tab": "Abrir em nova aba"
+  },
+  "features": {
+    "title": "Extrair Todos os Favicons de Qualquer Site",
+    "description": "Nosso rastreador profundo extrai todos os formatos de ícones, incluindo HTML, Web Manifest, BrowserConfig e fornece análise inteligente com opções de download.",
+    "deep_extraction": "Extração Profunda",
+    "deep_extraction_desc": "Encontra todos os formatos e tamanhos de ícones",
+    "visual_matrix": "Matriz Visual",
+    "visual_matrix_desc": "Visualizar todos os ícones antes de baixar",
+    "one_click_zip": "ZIP com Um Clique",
+    "one_click_zip_desc": "Baixar tudo de uma vez",
+    "smart_analysis": "Análise Inteligente",
+    "smart_analysis_desc": "Obtenha insights e recomendações"
+  },
+  "footer": {
+    "text": "Alimentado por Deep Favicon Fetcher Backend com Puppeteer • Suporta todos os padrões de ícones modernos"
+  }
+}

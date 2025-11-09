@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "AI Favicon 抽出ツール",
+    "powered_by": "Deep Crawler により提供"
+  },
+  "meta": {
+    "title": "Favicon 抽出ツール - 最も包括的なツール",
+    "description": "深いクローリングにより、あらゆるウェブサイトからすべてのfaviconを抽出します。HTML、Web Manifest、BrowserConfigをサポートし、ダウンロードオプション付きのインテリジェントな分析を提供します。",
+    "og_title": "Favicon 抽出ツール - ウェブサイトアイコンを抽出",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "AIFavicon 抽出ツール",
+    "subtitle": "最も包括的なfavicon抽出ツール"
+  },
+  "form": {
+    "placeholder": "ウェブサイトURLを入力（例：https://github.com）",
+    "button_extract": "抽出",
+    "button_extracting": "抽出中...",
+    "try_label": "試す：",
+    "error_empty": "URLを入力してください",
+    "error_invalid": "有効なURLを入力してください（http://またはhttps://を含む）"
+  },
+  "results": {
+    "found": "{count}個のアイコンが見つかりました",
+    "extracted_from": "{domain}から抽出",
+    "download_all": "すべてをZIPとしてダウンロード",
+    "downloading": "ZIPを準備中...（{current}/{total}）",
+    "icon_collection": "アイコンコレクション"
+  },
+  "warnings": {
+    "captcha_title": "APIフォールバックを使用中",
+    "captcha_message": "このウェブサイトにはボット対策があります。高品質なアイコンを提供するため、Google S2とDuckDuckGoのfavicon APIを使用しています。",
+    "no_icons_title": "アイコンが見つかりません",
+    "no_icons_message": "このウェブサイトのfaviconが検出されませんでした。これは、サイトにfaviconがないか、JavaScriptレンダリングが必要なためかもしれません。"
+  },
+  "analysis": {
+    "title": "インテリジェント分析",
+    "excellent": "優秀",
+    "good": "良好",
+    "needs_improvement": "改善が必要",
+    "total_icons": "アイコン総数",
+    "svg_format": "SVG形式",
+    "web_manifest": "Web Manifest",
+    "best_practices": "検出されたベストプラクティス",
+    "improvements": "改善提案",
+    "feature_coverage": "機能カバレッジ",
+    "apple_touch_icon": "Apple Touchアイコン",
+    "apple_touch_icon_desc": "iOSホーム画面用",
+    "high_resolution": "高解像度（512x512+）",
+    "high_resolution_desc": "PWAおよびモダンディスプレイ用",
+    "svg_format_desc": "スケーラブルベクターグラフィックス",
+    "web_manifest_desc": "PWA設定",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Windowsタイル画像"
+  },
+  "icon_card": {
+    "download": "ダウンロード",
+    "downloading": "ダウンロード中...",
+    "copy_url": "URLをコピー",
+    "open_new_tab": "新しいタブで開く"
+  },
+  "features": {
+    "title": "あらゆるウェブサイトからすべてのFaviconを抽出",
+    "description": "当社の深いクローラーは、HTML、Web Manifest、BrowserConfigを含むすべてのアイコン形式を抽出し、ダウンロードオプション付きのインテリジェントな分析を提供します。",
+    "deep_extraction": "深い抽出",
+    "deep_extraction_desc": "すべてのアイコン形式とサイズを見つける",
+    "visual_matrix": "ビジュアルマトリックス",
+    "visual_matrix_desc": "ダウンロード前にすべてのアイコンをプレビュー",
+    "one_click_zip": "ワンクリックZIP",
+    "one_click_zip_desc": "一度にすべてをダウンロード",
+    "smart_analysis": "スマート分析",
+    "smart_analysis_desc": "インサイトと推奨事項を取得"
+  },
+  "footer": {
+    "text": "Puppeteerを使用したDeep Favicon Fetcher Backendにより提供 • すべてのモダンアイコン標準をサポート"
+  }
+}

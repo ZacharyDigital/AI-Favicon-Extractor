@@ -1,0 +1,78 @@
+{
+  "common": {
+    "app_name": "AI Favicon 추출기",
+    "powered_by": "Deep Crawler로 제공"
+  },
+  "meta": {
+    "title": "Favicon 추출기 - 가장 포괄적인 도구",
+    "description": "깊은 크롤링으로 모든 웹사이트에서 모든 favicon을 추출합니다. HTML, Web Manifest, BrowserConfig를 지원하며 다운로드 옵션이 포함된 지능형 분석을 제공합니다.",
+    "og_title": "Favicon 추출기 - 웹사이트 아이콘 추출",
+    "twitter_creator": "@faviconextractor"
+  },
+  "header": {
+    "title": "AIFavicon 추출기",
+    "subtitle": "가장 포괄적인 favicon 추출 도구"
+  },
+  "form": {
+    "placeholder": "웹사이트 URL 입력 (예: https://github.com)",
+    "button_extract": "추출",
+    "button_extracting": "추출 중...",
+    "try_label": "시도:",
+    "error_empty": "URL을 입력해주세요",
+    "error_invalid": "유효한 URL을 입력해주세요 (http:// 또는 https:// 포함)"
+  },
+  "results": {
+    "found": "{count}개의 아이콘을 찾았습니다",
+    "extracted_from": "{domain}에서 추출됨",
+    "download_all": "모두 ZIP으로 다운로드",
+    "downloading": "ZIP 준비 중... ({current}/{total})",
+    "icon_collection": "아이콘 컬렉션"
+  },
+  "warnings": {
+    "captcha_title": "API 대체 사용 중",
+    "captcha_message": "이 웹사이트에는 봇 방지 보호가 있습니다. 고품질 아이콘을 제공하기 위해 Google S2 및 DuckDuckGo favicon API를 사용하고 있습니다.",
+    "no_icons_title": "아이콘을 찾을 수 없음",
+    "no_icons_message": "이 웹사이트에 대한 favicon이 감지되지 않았습니다. 이는 사이트에 favicon이 없거나 JavaScript 렌더링이 필요하기 때문일 수 있습니다."
+  },
+  "analysis": {
+    "title": "지능형 분석",
+    "excellent": "우수",
+    "good": "좋음",
+    "needs_improvement": "개선 필요",
+    "total_icons": "총 아이콘",
+    "svg_format": "SVG 형식",
+    "web_manifest": "Web Manifest",
+    "best_practices": "검출된 모범 사례",
+    "improvements": "개선 제안",
+    "feature_coverage": "기능 커버리지",
+    "apple_touch_icon": "Apple Touch 아이콘",
+    "apple_touch_icon_desc": "iOS 홈 화면용",
+    "high_resolution": "고해상도 (512x512+)",
+    "high_resolution_desc": "PWA 및 현대적 디스플레이용",
+    "svg_format_desc": "확장 가능한 벡터 그래픽",
+    "web_manifest_desc": "PWA 구성",
+    "browserconfig": "BrowserConfig",
+    "browserconfig_desc": "Windows 타일 이미지"
+  },
+  "icon_card": {
+    "download": "다운로드",
+    "downloading": "다운로드 중...",
+    "copy_url": "URL 복사",
+    "open_new_tab": "새 탭에서 열기"
+  },
+  "features": {
+    "title": "모든 웹사이트에서 모든 Favicon 추출",
+    "description": "우리의 깊은 크롤러는 HTML, Web Manifest, BrowserConfig를 포함한 모든 아이콘 형식을 추출하고 다운로드 옵션이 포함된 지능형 분석을 제공합니다.",
+    "deep_extraction": "깊은 추출",
+    "deep_extraction_desc": "모든 아이콘 형식 및 크기 찾기",
+    "visual_matrix": "시각적 매트릭스",
+    "visual_matrix_desc": "다운로드 전에 모든 아이콘 미리보기",
+    "one_click_zip": "원클릭 ZIP",
+    "one_click_zip_desc": "한 번에 모두 다운로드",
+    "smart_analysis": "스마트 분석",
+    "smart_analysis_desc": "인사이트 및 권장사항 얻기"
+  },
+  "footer": {
+    "text": "Puppeteer를 사용한 Deep Favicon Fetcher Backend로 제공 • 모든 현대적 아이콘 표준 지원"
+  }
+}
