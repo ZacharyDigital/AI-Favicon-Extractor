@@ -1,18 +1,33 @@
-'use client';
-
 import { AlertTriangle, CheckCircle, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { IconAnalysis } from '@/types/favicon';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
 
 interface AnalysisPanelProps {
   analysis: IconAnalysis;
+  translations: {
+    title: string;
+    excellent: string;
+    good: string;
+    needs_improvement: string;
+    total_icons: string;
+    svg_format: string;
+    web_manifest: string;
+    best_practices: string;
+    improvements: string;
+    feature_coverage: string;
+    apple_touch_icon: string;
+    apple_touch_icon_desc: string;
+    high_resolution: string;
+    high_resolution_desc: string;
+    svg_format_desc: string;
+    web_manifest_desc: string;
+    browserconfig: string;
+    browserconfig_desc: string;
+  };
 }
 
-export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
-  const t = useTranslations();
-
+export function AnalysisPanel({ analysis, translations }: AnalysisPanelProps) {
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600';
     if (score >= 50) return 'text-yellow-600';
@@ -20,9 +35,9 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
   };
 
   const getScoreLabel = (score: number) => {
-    if (score >= 80) return t('analysis.excellent');
-    if (score >= 50) return t('analysis.good');
-    return t('analysis.needs_improvement');
+    if (score >= 80) return translations.excellent;
+    if (score >= 50) return translations.good;
+    return translations.needs_improvement;
   };
 
   const getScoreRing = (score: number) => {
@@ -35,7 +50,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
     <Card className="border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-blue-400 transition-all duration-200">
       <CardHeader className="pb-4">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-xl">{t('analysis.title')}</CardTitle>
+          <CardTitle className="text-xl">{translations.title}</CardTitle>
           <div className="flex items-center gap-3">
             <div className="text-right">
               <div className={cn('text-3xl font-bold', getScoreColor(analysis.score))}>
@@ -77,17 +92,17 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
         <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
           <div className="rounded-lg bg-blue-50 p-3">
             <div className="text-2xl font-bold text-blue-900">{analysis.totalIcons}</div>
-            <div className="text-sm text-blue-700">{t('analysis.total_icons')}</div>
+            <div className="text-sm text-blue-700">{translations.total_icons}</div>
           </div>
           <div className="rounded-lg bg-green-50 p-3">
             <div className="text-2xl font-bold text-green-900">{analysis.hasSVG ? '✓' : '✗'}</div>
-            <div className="text-sm text-green-700">{t('analysis.svg_format')}</div>
+            <div className="text-sm text-green-700">{translations.svg_format}</div>
           </div>
           <div className="rounded-lg bg-purple-50 p-3">
             <div className="text-2xl font-bold text-purple-900">
               {analysis.hasManifest ? '✓' : '✗'}
             </div>
-            <div className="text-sm text-purple-700">{t('analysis.web_manifest')}</div>
+            <div className="text-sm text-purple-700">{translations.web_manifest}</div>
           </div>
         </div>
 
@@ -96,7 +111,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
           <div className="mb-6">
             <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gray-900">
               <CheckCircle className="h-5 w-5 text-green-600" />
-              {t('analysis.best_practices')}
+              {translations.best_practices}
             </h3>
             <div className="space-y-2">
               {analysis.recommendations.map((recommendation, index) => (
@@ -117,7 +132,7 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gray-900">
               <AlertTriangle className="h-5 w-5 text-yellow-600" />
-              {t('analysis.improvements')}
+              {translations.improvements}
             </h3>
             <div className="space-y-2">
               {analysis.warnings.map((warning, index) => (
@@ -136,33 +151,33 @@ export function AnalysisPanel({ analysis }: AnalysisPanelProps) {
         {/* Feature Coverage */}
         <div className="mt-6 border-t border-gray-300 pt-6">
           <h3 className="mb-3 text-sm font-semibold text-gray-900">
-            {t('analysis.feature_coverage')}
+            {translations.feature_coverage}
           </h3>
           <div className="space-y-2">
             <FeatureItem
-              label={t('analysis.apple_touch_icon')}
+              label={translations.apple_touch_icon}
               present={analysis.hasAppleTouchIcon}
-              description={t('analysis.apple_touch_icon_desc')}
+              description={translations.apple_touch_icon_desc}
             />
             <FeatureItem
-              label={t('analysis.high_resolution')}
+              label={translations.high_resolution}
               present={analysis.hasHighRes}
-              description={t('analysis.high_resolution_desc')}
+              description={translations.high_resolution_desc}
             />
             <FeatureItem
-              label={t('analysis.svg_format')}
+              label={translations.svg_format}
               present={analysis.hasSVG}
-              description={t('analysis.svg_format_desc')}
+              description={translations.svg_format_desc}
             />
             <FeatureItem
-              label={t('analysis.web_manifest')}
+              label={translations.web_manifest}
               present={analysis.hasManifest}
-              description={t('analysis.web_manifest_desc')}
+              description={translations.web_manifest_desc}
             />
             <FeatureItem
-              label={t('analysis.browserconfig')}
+              label={translations.browserconfig}
               present={analysis.hasBrowserConfig}
-              description={t('analysis.browserconfig_desc')}
+              description={translations.browserconfig_desc}
             />
           </div>
         </div>

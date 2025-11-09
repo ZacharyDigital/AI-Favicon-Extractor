@@ -39,6 +39,28 @@ export function FaviconExtractor() {
   const [downloadingZip, setDownloadingZip] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState({ current: 0, total: 0 });
 
+  // 准备 AnalysisPanel 所需的翻译文本
+  const analysisTranslations = {
+    title: t('analysis.title'),
+    excellent: t('analysis.excellent'),
+    good: t('analysis.good'),
+    needs_improvement: t('analysis.needs_improvement'),
+    total_icons: t('analysis.total_icons'),
+    svg_format: t('analysis.svg_format'),
+    web_manifest: t('analysis.web_manifest'),
+    best_practices: t('analysis.best_practices'),
+    improvements: t('analysis.improvements'),
+    feature_coverage: t('analysis.feature_coverage'),
+    apple_touch_icon: t('analysis.apple_touch_icon'),
+    apple_touch_icon_desc: t('analysis.apple_touch_icon_desc'),
+    high_resolution: t('analysis.high_resolution'),
+    high_resolution_desc: t('analysis.high_resolution_desc'),
+    svg_format_desc: t('analysis.svg_format_desc'),
+    web_manifest_desc: t('analysis.web_manifest_desc'),
+    browserconfig: t('analysis.browserconfig'),
+    browserconfig_desc: t('analysis.browserconfig_desc'),
+  };
+
   const form = useForm<FormData>({
     resolver: zodResolver(createFormSchema(t)),
     defaultValues: {
@@ -230,7 +252,7 @@ export function FaviconExtractor() {
           {/* Analysis Panel */}
           {analysis && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <AnalysisPanel analysis={analysis} />
+              <AnalysisPanel analysis={analysis} translations={analysisTranslations} />
             </div>
           )}
 
