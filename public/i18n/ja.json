@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "AIFavicon 抽出ツール",
-    "subtitle": "最も包括的なfavicon抽出ツール"
+    "subtitle": "最も包括的なfavicon抽出ツール",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "生成",
+      "examples": "例",
+      "pricing": "料金",
+      "about": "概要"
+    },
+    "signup": "登録"
   },
   "form": {
     "placeholder": "ウェブサイトURLを入力（例：https://github.com）",
@@ -73,6 +81,18 @@
     "smart_analysis_desc": "インサイトと推奨事項を取得"
   },
   "footer": {
-    "text": "Puppeteerを使用したDeep Favicon Fetcher Backendにより提供 • すべてのモダンアイコン標準をサポート"
+    "text": "Puppeteerを使用したDeep Favicon Fetcher Backendにより提供 • すべてのモダンアイコン標準をサポート",
+    "copyright": "© {year} AI Favicon. 全ての権利を保有。",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "contact": "お問い合わせ"
+  },
+  "page": {
+    "hero": {
+      "title": "AIで完璧なFaviconを作成",
+      "subtitle": "あなたのブランドを言葉で説明し、AIが数秒でユニークで印象的なfaviconをデザインします。",
+      "placeholder": "例：'回路でできた脳'",
+      "button": "生成"
+    }
   }
 }

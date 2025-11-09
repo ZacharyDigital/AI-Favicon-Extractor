@@ -25,46 +25,27 @@ import { appConfig } from '@/config';
  *    - sitemap 会自动为每个语言生成对应的 URL
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 使用统一配置的站点 URL
   const siteUrl = appConfig.siteUrl;
-
-  // 只包含实际存在的路由
-  // 添加新路由时，在此数组中添加路径
-  const routes = [''];
-
-  // 从配置中获取支持的语言列表
   const locales = appConfig.i18n.locales;
+  const defaultLocale = appConfig.i18n.defaultLocale;
 
-  // 为每个语言和路由生成 sitemap 条目
-  const entries: MetadataRoute.Sitemap = [];
+  const urls: MetadataRoute.Sitemap = [];
 
+  // 为每个语言生成主页 URL
   locales.forEach((locale) => {
-    routes.forEach((route) => {
-      // 生成 URL：默认语言不显示前缀，其他语言显示语言前缀
-      const url =
-        locale === appConfig.i18n.defaultLocale
-          ? `${siteUrl}${route}` // 默认语言：https://favicon-extractor.app
-          : `${siteUrl}/${locale}${route}`; // 其他语言：https://favicon-extractor.app/zh
-
-      entries.push({
-        url,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.8,
-        // 为每个 URL 添加所有语言的 hreflang 链接
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((loc) => [
-              loc,
-              loc === appConfig.i18n.defaultLocale
-                ? `${siteUrl}${route}`
-                : `${siteUrl}/${loc}${route}`,
-            ])
-          ),
-        },
-      });
+    const url = locale === defaultLocale ? siteUrl : `${siteUrl}/${locale}`;
+    urls.push({
+      url,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((loc) => [loc, loc === defaultLocale ? siteUrl : `${siteUrl}/${loc}`])
+        ),
+      },
     });
   });
 
-  return entries;
+  return urls;
 }

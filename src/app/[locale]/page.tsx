@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
-import { Package } from 'lucide-react';
 import { FaviconExtractor } from '@/components/FaviconExtractor';
 import { StructuredData } from '@/components/StructuredData';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Header } from '@/components/homepage/Header';
+import { HeroSection } from '@/components/homepage/HeroSection';
+import { ExamplesGallery } from '@/components/homepage/ExamplesGallery';
+import { FeaturesHighlight } from '@/components/homepage/FeaturesHighlight';
+import { Testimonials } from '@/components/homepage/Testimonials';
+import { PricingPlans } from '@/components/homepage/PricingPlans';
+import { FAQSection } from '@/components/homepage/FAQSection';
+import { Footer } from '@/components/homepage/Footer';
 import { getTranslations } from 'next-intl/server';
 import { appConfig } from '@/config';
 
@@ -110,70 +116,180 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const t = await getTranslations({ locale });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-[#f7f6f8] font-['Space_Grotesk',sans-serif]">
       <StructuredData locale={locale} />
 
-      {/* Header */}
-      <header className="border-b border-gray-300 bg-white shadow-sm sticky top-0 z-50">
-        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  {t('header.title')}
-                </span>
-              </h1>
-              <p className="mt-1 text-sm text-gray-600">{t('header.subtitle')}</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-sm font-medium text-white shadow-lg">
-                <Package className="h-4 w-4" />
-                {t('common.powered_by')}
-              </div>
-              <LanguageSwitcher />
-            </div>
+      {/* Layout Container */}
+      <div className="flex h-full flex-1 flex-col">
+        <div className="flex flex-1 justify-center px-4 py-5 md:px-10 lg:px-20 xl:px-40">
+          <div className="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
+            {/* Header */}
+            <Header locale={locale} />
+
+            {/* Main Content */}
+            <main className="flex flex-col gap-10 md:gap-16">
+              {/* Hero Section */}
+              <HeroSection
+                translations={{
+                  title: t('page.hero.title'),
+                  subtitle: t('page.hero.subtitle'),
+                  placeholder: t('page.hero.placeholder'),
+                  button: t('page.hero.button'),
+                }}
+              />
+
+              {/* Core Function Section */}
+              <section id="extract" className="px-4 py-10">
+                <div className="mb-8 text-center">
+                  <h2 className="mb-4 text-3xl font-bold text-[#191022]">{t('features.title')}</h2>
+                  <p className="text-slate-600">{t('features.description')}</p>
+                </div>
+                <FaviconExtractor />
+              </section>
+
+              {/* Examples Gallery */}
+              <ExamplesGallery title={t('page.examples.title')} />
+
+              {/* Features Highlight */}
+              <FeaturesHighlight
+                title={t('page.features_highlight.title')}
+                subtitle={t('page.features_highlight.subtitle')}
+                features={[
+                  {
+                    icon: 'auto_awesome',
+                    title: t('page.features_highlight.unlimited_styles.title'),
+                    description: t('page.features_highlight.unlimited_styles.desc'),
+                  },
+                  {
+                    icon: 'photo_size_select_large',
+                    title: t('page.features_highlight.high_resolution.title'),
+                    description: t('page.features_highlight.high_resolution.desc'),
+                  },
+                  {
+                    icon: 'download',
+                    title: t('page.features_highlight.instant_download.title'),
+                    description: t('page.features_highlight.instant_download.desc'),
+                  },
+                  {
+                    icon: 'memory',
+                    title: t('page.features_highlight.ai_powered.title'),
+                    description: t('page.features_highlight.ai_powered.desc'),
+                  },
+                ]}
+              />
+
+              {/* Testimonials */}
+              <Testimonials
+                title={t('page.testimonials.title')}
+                subtitle={t('page.testimonials.subtitle')}
+                testimonials={[
+                  {
+                    content: t('page.testimonials.user1.content'),
+                    userName: t('page.testimonials.user1.name'),
+                    userRole: t('page.testimonials.user1.role'),
+                    avatarUrl:
+                      'https://lh3.googleusercontent.com/aida-public/AB6AXuAggRMIeUI85NP4VyS35gjdZ-oJL-iz0soUv8-prNQJ0cr52Dy7HoVAEnMi1EElyulhoUTPK4NCJWLewKwwtR6fPcyfqaOwn_cRLMHYzAFRUtLRv2eRTfSQZ4pGsVpgsKofqiXqslckmPRaKALu24tUZ-ecv-8LtYYDi6AO05yw_V2n-BKNhjyG1coDSYssPvXf7YZEIBC1_-W3mYRR5rZPX-bPh1ACJcs-ajvkh2XrXD1FVIkSNi7GjCZmMkOEtq3v6Y4_4VDiyHc',
+                  },
+                  {
+                    content: t('page.testimonials.user2.content'),
+                    userName: t('page.testimonials.user2.name'),
+                    userRole: t('page.testimonials.user2.role'),
+                    avatarUrl:
+                      'https://lh3.googleusercontent.com/aida-public/AB6AXuDT2Jgf2eT7aNkWD4kuQ69qrz9eO_4R8Vu0_1n1mO3pegb-MnJTiBvW05aLkbRB-i4re_xjoLjPRODqdkDIxnJ-aSaSSQ54XuwCz_z39jUatRcldewiY8nQme8wKhargTLjteVck_n3qmkZwa3rzLLT5d1Ey--nwOG_aPeVhj875Qfl7YuTlLPDAzZs2kbVo-JeYjpk8DlRZo5O-AF4-6lv6XIQe7Q317V9e875QA-Mfau-AaSZuEYG7FBSR1bRHiBgWfEkRd99HW4',
+                  },
+                  {
+                    content: t('page.testimonials.user3.content'),
+                    userName: t('page.testimonials.user3.name'),
+                    userRole: t('page.testimonials.user3.role'),
+                    avatarUrl:
+                      'https://lh3.googleusercontent.com/aida-public/AB6AXuA5LeIZ0nsbl5twbwwgXZQLpzHtNoRDVbNIQBa78ogWPF0rioYtBFianVnzJ3prEf9JYI-kf_nUExKeQ-tQpUxTn-jGQPyMFFQJfh9iyzuyc7ROt_qrrNAtgTTq5KR9tjQtGzcYyJbFEU5XwwT3qAuCviCbo2c6cRnjYCTSNkH7QjxbWWCd6gF7gtRWiMs243MPQBLqfTK9L5gZ_2aJ3OFnzz_lsLCrgZ6AyKSqSNQ19DxS4OTTTAdYCd8a3M1CXYKw34QpqOwmmvQ',
+                  },
+                ]}
+              />
+
+              {/* Pricing Plans */}
+              <PricingPlans
+                title={t('page.pricing.title')}
+                subtitle={t('page.pricing.subtitle')}
+                ctaButtonText={t('page.pricing.cta_button')}
+                plans={[
+                  {
+                    name: t('page.pricing.free.name'),
+                    price: t('page.pricing.free.price'),
+                    period: t('page.pricing.free.period'),
+                    description: t('page.pricing.free.desc'),
+                    features: [
+                      t('page.pricing.free.feature1'),
+                      t('page.pricing.free.feature2'),
+                      t('page.pricing.free.feature3'),
+                    ],
+                    buttonText: t('page.pricing.free.button'),
+                  },
+                  {
+                    name: t('page.pricing.pro.name'),
+                    price: t('page.pricing.pro.price'),
+                    period: t('page.pricing.pro.period'),
+                    description: t('page.pricing.pro.desc'),
+                    features: [
+                      t('page.pricing.pro.feature1'),
+                      t('page.pricing.pro.feature2'),
+                      t('page.pricing.pro.feature3'),
+                      t('page.pricing.pro.feature4'),
+                    ],
+                    buttonText: t('page.pricing.pro.button'),
+                    highlighted: true,
+                    badge: t('page.pricing.pro.badge'),
+                  },
+                  {
+                    name: t('page.pricing.business.name'),
+                    price: t('page.pricing.business.price'),
+                    period: t('page.pricing.business.period'),
+                    description: t('page.pricing.business.desc'),
+                    features: [
+                      t('page.pricing.business.feature1'),
+                      t('page.pricing.business.feature2'),
+                      t('page.pricing.business.feature3'),
+                    ],
+                    buttonText: t('page.pricing.business.button'),
+                  },
+                ]}
+              />
+
+              {/* FAQ Section */}
+              <FAQSection
+                title={t('page.faq.title')}
+                subtitle={t('page.faq.subtitle')}
+                faqs={[
+                  {
+                    question: t('page.faq.q1.question'),
+                    answer: t('page.faq.q1.answer'),
+                    defaultOpen: true,
+                  },
+                  {
+                    question: t('page.faq.q2.question'),
+                    answer: t('page.faq.q2.answer'),
+                  },
+                  {
+                    question: t('page.faq.q3.question'),
+                    answer: t('page.faq.q3.answer'),
+                  },
+                  {
+                    question: t('page.faq.q4.question'),
+                    answer: t('page.faq.q4.answer'),
+                  },
+                  {
+                    question: t('page.faq.q5.question'),
+                    answer: t('page.faq.q5.answer'),
+                  },
+                ]}
+              />
+            </main>
+
+            {/* Footer */}
+            <Footer locale={locale} />
           </div>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <FaviconExtractor />
-
-        {/* Static SEO Content - Empty State (Server-rendered) */}
-        <section className="mx-auto mt-16 max-w-2xl text-center">
-          <div className="mb-6 flex justify-center">
-            <div className="rounded-full bg-gradient-to-br from-blue-100 to-purple-100 p-6">
-              <Package className="h-12 w-12 text-blue-600" />
-            </div>
-          </div>
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">{t('features.title')}</h2>
-          <p className="mb-8 text-gray-600">{t('features.description')}</p>
-          <div className="grid gap-4 text-left sm:grid-cols-2">
-            {[
-              { title: t('features.deep_extraction'), desc: t('features.deep_extraction_desc') },
-              { title: t('features.visual_matrix'), desc: t('features.visual_matrix_desc') },
-              { title: t('features.one_click_zip'), desc: t('features.one_click_zip_desc') },
-              { title: t('features.smart_analysis'), desc: t('features.smart_analysis_desc') },
-            ].map((feature) => (
-              <div
-                key={feature.title}
-                className="rounded-xl border border-gray-300 bg-white p-6 shadow-sm hover:shadow-md hover:border-blue-400 hover:bg-white transition-all duration-300"
-              >
-                <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                <p className="text-sm text-gray-600">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="mt-20 border-t border-gray-300 bg-white py-8">
-        <div className="mx-auto max-w-7xl px-4 text-center text-sm text-gray-600 sm:px-6 lg:px-8">
-          <p>{t('footer.text')}</p>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 }

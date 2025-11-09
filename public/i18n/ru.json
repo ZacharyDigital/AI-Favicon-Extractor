@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "Извлекатель AIFavicon",
-    "subtitle": "Самый полный инструмент для извлечения favicon"
+    "subtitle": "Самый полный инструмент для извлечения favicon",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "Генерировать",
+      "examples": "Примеры",
+      "pricing": "Цены",
+      "about": "О нас"
+    },
+    "signup": "Регистрация"
   },
   "form": {
     "placeholder": "Введите URL веб-сайта (например: https://github.com)",
@@ -73,6 +81,18 @@
     "smart_analysis_desc": "Получите аналитику и рекомендации"
   },
   "footer": {
-    "text": "Работает на Deep Favicon Fetcher Backend с Puppeteer • Поддерживает все современные стандарты иконок"
+    "text": "Работает на Deep Favicon Fetcher Backend с Puppeteer • Поддерживает все современные стандарты иконок",
+    "copyright": "© {year} AI Favicon. Все права защищены.",
+    "terms": "Условия использования",
+    "privacy": "Политика конфиденциальности",
+    "contact": "Контакты"
+  },
+  "page": {
+    "hero": {
+      "title": "Создайте Идеальный Favicon с Помощью ИИ",
+      "subtitle": "Опишите свой бренд словами, и пусть наш ИИ создаст уникальный и запоминающийся favicon для вас за секунды.",
+      "placeholder": "напр., 'Мозг из схем'",
+      "button": "Генерировать"
+    }
   }
 }

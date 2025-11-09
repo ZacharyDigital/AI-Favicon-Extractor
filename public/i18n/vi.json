@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "Trình Trích Xuất AIFavicon",
-    "subtitle": "Công cụ trích xuất favicon toàn diện nhất"
+    "subtitle": "Công cụ trích xuất favicon toàn diện nhất",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "Tạo",
+      "examples": "Ví dụ",
+      "pricing": "Giá cả",
+      "about": "Giới thiệu"
+    },
+    "signup": "Đăng ký"
   },
   "form": {
     "placeholder": "Nhập URL trang web (ví dụ: https://github.com)",
@@ -73,6 +81,18 @@
     "smart_analysis_desc": "Nhận thông tin chi tiết và đề xuất"
   },
   "footer": {
-    "text": "Được hỗ trợ bởi Deep Favicon Fetcher Backend với Puppeteer • Hỗ trợ tất cả các tiêu chuẩn biểu tượng hiện đại"
+    "text": "Được hỗ trợ bởi Deep Favicon Fetcher Backend với Puppeteer • Hỗ trợ tất cả các tiêu chuẩn biểu tượng hiện đại",
+    "copyright": "© {year} AI Favicon. Bảo lưu mọi quyền.",
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật",
+    "contact": "Liên hệ"
+  },
+  "page": {
+    "hero": {
+      "title": "Tạo Favicon Hoàn Hảo với AI",
+      "subtitle": "Mô tả thương hiệu của bạn bằng lời và để AI của chúng tôi thiết kế một favicon độc đáo và đáng nhớ cho bạn trong vài giây.",
+      "placeholder": "ví dụ, 'Một bộ não làm bằng mạch điện'",
+      "button": "Tạo"
+    }
   }
 }

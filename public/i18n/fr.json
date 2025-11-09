@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "Extracteur AIFavicon",
-    "subtitle": "L'outil d'extraction de favicon le plus complet"
+    "subtitle": "L'outil d'extraction de favicon le plus complet",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "Générer",
+      "examples": "Exemples",
+      "pricing": "Tarifs",
+      "about": "À propos"
+    },
+    "signup": "S'inscrire"
   },
   "form": {
     "placeholder": "Entrez l'URL du site web (ex.: https://github.com)",
@@ -73,6 +81,18 @@
     "smart_analysis_desc": "Obtenez des insights et des recommandations"
   },
   "footer": {
-    "text": "Propulsé par Deep Favicon Fetcher Backend avec Puppeteer • Prend en charge tous les standards d'icônes modernes"
+    "text": "Propulsé par Deep Favicon Fetcher Backend avec Puppeteer • Prend en charge tous les standards d'icônes modernes",
+    "copyright": "© {year} AI Favicon. Tous droits réservés.",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "contact": "Contact"
+  },
+  "page": {
+    "hero": {
+      "title": "Créez le Favicon Parfait avec l'IA",
+      "subtitle": "Décrivez votre marque en mots, et laissez notre IA concevoir un favicon unique et mémorable pour vous en quelques secondes.",
+      "placeholder": "ex., 'Un cerveau fait de circuits'",
+      "button": "Générer"
+    }
   }
 }

@@ -1,3 +1,7 @@
+---
+trigger: manual
+---
+
 # AI Favicon Extractor - 项目开发规则
 
 本文档定义了 AI Favicon Extractor 项目的开发规范、架构原则和最佳实践。

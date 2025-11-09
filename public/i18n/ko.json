@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "AIFavicon 추출기",
-    "subtitle": "가장 포괄적인 favicon 추출 도구"
+    "subtitle": "가장 포괄적인 favicon 추출 도구",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "생성",
+      "examples": "예제",
+      "pricing": "요금",
+      "about": "정보"
+    },
+    "signup": "가입"
   },
   "form": {
     "placeholder": "웹사이트 URL 입력 (예: https://github.com)",
@@ -73,6 +81,18 @@
     "smart_analysis_desc": "인사이트 및 권장사항 얻기"
   },
   "footer": {
-    "text": "Puppeteer를 사용한 Deep Favicon Fetcher Backend로 제공 • 모든 현대적 아이콘 표준 지원"
+    "text": "Puppeteer를 사용한 Deep Favicon Fetcher Backend로 제공 • 모든 현대적 아이콘 표준 지원",
+    "copyright": "© {year} AI Favicon. 모든 권리 보유.",
+    "terms": "서비스 약관",
+    "privacy": "개인정보 보호정책",
+    "contact": "문의하기"
+  },
+  "page": {
+    "hero": {
+      "title": "AI로 완벽한 Favicon 생성",
+      "subtitle": "브랜드를 단어로 설명하면 AI가 몇 초 만에 독특하고 기억에 남는 favicon을 디자인해드립니다.",
+      "placeholder": "예: '회로로 만든 뇌'",
+      "button": "생성"
+    }
   }
 }

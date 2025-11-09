@@ -11,7 +11,15 @@
   },
   "header": {
     "title": "AIFavicon Extractor",
-    "subtitle": "The most comprehensive favicon extraction tool"
+    "subtitle": "The most comprehensive favicon extraction tool",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "Generate",
+      "examples": "Examples",
+      "pricing": "Pricing",
+      "about": "About"
+    },
+    "signup": "Sign Up"
   },
   "form": {
     "placeholder": "Enter website URL (e.g., https://github.com)",
@@ -73,7 +81,121 @@
     "smart_analysis_desc": "Get insights and recommendations"
   },
   "footer": {
-    "text": "Powered by Deep Favicon Fetcher Backend with Puppeteer • Supports all modern icon standards"
+    "text": "Powered by Deep Favicon Fetcher Backend with Puppeteer • Supports all modern icon standards",
+    "copyright": "© {year} AI Favicon. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
+  },
+  "page": {
+    "hero": {
+      "title": "Create the Perfect Favicon with AI",
+      "subtitle": "Describe your brand in words, and let our AI design a unique and memorable favicon for you in seconds.",
+      "placeholder": "e.g., 'A brain made of circuits'",
+      "button": "Generate"
+    },
+    "examples": {
+      "title": "See What's Possible"
+    },
+    "features_highlight": {
+      "title": "Why Choose Us?",
+      "subtitle": "Discover the advantages of using our AI to create your brand's perfect favicon.",
+      "unlimited_styles": {
+        "title": "Unlimited Styles",
+        "desc": "Explore endless creative possibilities with our advanced AI."
+      },
+      "high_resolution": {
+        "title": "High-Resolution",
+        "desc": "Get crisp, clear favicons ready for any device or screen."
+      },
+      "instant_download": {
+        "title": "Instant Download",
+        "desc": "Your favicon is ready in seconds, with no waiting time."
+      },
+      "ai_powered": {
+        "title": "AI-Powered Creativity",
+        "desc": "Leverage the power of AI to generate truly unique designs."
+      }
+    },
+    "testimonials": {
+      "title": "Loved by Creators Everywhere",
+      "subtitle": "See what our users are saying about the speed, quality, and simplicity of AI Favicon Generator.",
+      "user1": {
+        "content": "I'm not a designer, but AI Favicon Generator made me feel like one. I got a professional-looking favicon in less than a minute. So easy to use!",
+        "name": "Sarah L.",
+        "role": "Marketing Manager"
+      },
+      "user2": {
+        "content": "The quality of the generated favicons is outstanding. I was able to download high-resolution SVGs that look sharp on any screen. Highly recommended.",
+        "name": "Mike R.",
+        "role": "Indie Developer"
+      },
+      "user3": {
+        "content": "This tool is a huge time-saver. What used to take me hours of fiddling in design software now takes seconds. The AI suggestions are brilliant.",
+        "name": "Jenna T.",
+        "role": "Startup Founder"
+      }
+    },
+    "pricing": {
+      "title": "Find the Right Plan",
+      "subtitle": "Choose a plan that fits your needs. Start for free and upgrade anytime for more features and higher limits.",
+      "cta_button": "Get Started Now",
+      "free": {
+        "name": "Free",
+        "price": "$0",
+        "period": "/ month",
+        "desc": "For personal projects and exploration.",
+        "feature1": "10 generations per month",
+        "feature2": "Standard resolution",
+        "feature3": "Personal use license",
+        "button": "Get Started"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "$10",
+        "period": "/ month",
+        "desc": "Perfect for freelancers and small businesses.",
+        "feature1": "Unlimited generations",
+        "feature2": "High resolution (SVG, PNG)",
+        "feature3": "Commercial use license",
+        "feature4": "Priority support",
+        "button": "Choose Pro",
+        "badge": "Most Popular"
+      },
+      "business": {
+        "name": "Business",
+        "price": "$25",
+        "period": "/ month",
+        "desc": "For agencies and larger teams.",
+        "feature1": "Everything in Pro",
+        "feature2": "Team access (3 seats)",
+        "feature3": "API access",
+        "button": "Contact Us"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.",
+      "q1": {
+        "question": "How does the AI favicon generator work?",
+        "answer": "Our AI uses advanced machine learning models to interpret your text description and generate a unique favicon design. You simply type in what you're looking for—like 'a minimalist mountain logo'—and the AI creates several options for you to choose from."
+      },
+      "q2": {
+        "question": "What file formats can I download?",
+        "answer": "Depending on your plan, you can download favicons in various formats, including PNG (in multiple sizes like 16x16, 32x32, etc.) and high-resolution SVG. Our Pro and Business plans offer SVG downloads for crisp, scalable icons."
+      },
+      "q3": {
+        "question": "Can I use the favicons for commercial projects?",
+        "answer": "Yes! Favicons generated under our Pro and Business plans come with a full commercial license, allowing you to use them for any business or client project without attribution."
+      },
+      "q4": {
+        "question": "What if I'm not happy with the generated favicons?",
+        "answer": "You can generate multiple sets of favicons by tweaking your text prompt. Our free plan allows for 10 generations per month, while paid plans offer unlimited generations, so you can keep trying until you find the perfect design."
+      },
+      "q5": {
+        "question": "Do I need any design skills to use this tool?",
+        "answer": "Not at all! Our tool is designed for everyone, regardless of their design experience. If you can describe what you want, our AI can create it for you. It's the simplest way to get a professional favicon."
+      }
+    }
   }
 }
-

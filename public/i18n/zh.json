@@ -10,7 +10,15 @@
   },
   "header": {
     "title": "AI Favicon 提取器",
-    "subtitle": "最全面的 favicon 提取工具"
+    "subtitle": "最全面的 favicon 提取工具",
+    "brand": "AI Favicon",
+    "nav": {
+      "generate": "生成",
+      "examples": "示例",
+      "pricing": "定价",
+      "about": "关于"
+    },
+    "signup": "注册"
   },
   "form": {
     "placeholder": "输入网站 URL（例如：https://github.com）",
@@ -72,7 +80,121 @@
     "smart_analysis_desc": "获取见解和建议"
   },
   "footer": {
-    "text": "由 Puppeteer 深度 Favicon 获取器后端驱动 • 支持所有现代图标标准"
+    "text": "由 Puppeteer 深度 Favicon 获取器后端驱动 • 支持所有现代图标标准",
+    "copyright": "© {year} AI Favicon. 保留所有权利。",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "contact": "联系我们"
+  },
+  "page": {
+    "hero": {
+      "title": "用 AI 创建完美的 Favicon",
+      "subtitle": "用文字描述您的品牌，让我们的 AI 在几秒钟内为您设计一个独特且令人难忘的 favicon。",
+      "placeholder": "例如：'由电路组成的大脑'",
+      "button": "生成"
+    },
+    "examples": {
+      "title": "看看可能实现的效果"
+    },
+    "features_highlight": {
+      "title": "为什么选择我们？",
+      "subtitle": "探索使用我们的 AI 创建品牌完美 favicon 的优势。",
+      "unlimited_styles": {
+        "title": "无限风格",
+        "desc": "通过我们先进的 AI 探索无限创意可能性。"
+      },
+      "high_resolution": {
+        "title": "高分辨率",
+        "desc": "获取适用于任何设备或屏幕的清晰 favicon。"
+      },
+      "instant_download": {
+        "title": "即时下载",
+        "desc": "您的 favicon 在几秒钟内就绪，无需等待。"
+      },
+      "ai_powered": {
+        "title": "AI 驱动的创意",
+        "desc": "利用 AI 的力量生成真正独特的设计。"
+      }
+    },
+    "testimonials": {
+      "title": "深受各地创作者喜爱",
+      "subtitle": "看看我们的用户如何评价 AI Favicon Generator 的速度、质量和简便性。",
+      "user1": {
+        "content": "我不是设计师，但 AI Favicon Generator 让我感觉自己就像设计师一样。我在不到一分钟内就得到了一个专业外观的 favicon。太容易使用了！",
+        "name": "Sarah L.",
+        "role": "营销经理"
+      },
+      "user2": {
+        "content": "生成的 favicon 质量非常出色。我能够下载在任何屏幕上都很清晰的高分辨率 SVG。强烈推荐。",
+        "name": "Mike R.",
+        "role": "独立开发者"
+      },
+      "user3": {
+        "content": "这个工具节省了大量时间。过去需要我在设计软件中花费数小时的事情，现在只需几秒钟。AI 的建议非常棒。",
+        "name": "Jenna T.",
+        "role": "创业创始人"
+      }
+    },
+    "pricing": {
+      "title": "找到合适的计划",
+      "subtitle": "选择适合您需求的计划。免费开始，随时升级以获得更多功能和更高限制。",
+      "cta_button": "立即开始",
+      "free": {
+        "name": "免费版",
+        "price": "¥0",
+        "period": "/ 月",
+        "desc": "适用于个人项目和探索。",
+        "feature1": "每月 10 次生成",
+        "feature2": "标准分辨率",
+        "feature3": "个人使用许可",
+        "button": "开始使用"
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "¥70",
+        "period": "/ 月",
+        "desc": "适合自由职业者和小型企业。",
+        "feature1": "无限生成",
+        "feature2": "高分辨率 (SVG, PNG)",
+        "feature3": "商业使用许可",
+        "feature4": "优先支持",
+        "button": "选择专业版",
+        "badge": "最受欢迎"
+      },
+      "business": {
+        "name": "企业版",
+        "price": "¥175",
+        "period": "/ 月",
+        "desc": "适用于代理机构和大型团队。",
+        "feature1": "专业版所有功能",
+        "feature2": "团队访问（3 个席位）",
+        "feature3": "API 访问",
+        "button": "联系我们"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "有疑问吗？我们有答案。如果找不到您要找的内容，请随时与我们联系。",
+      "q1": {
+        "question": "AI favicon 生成器如何工作？",
+        "answer": "我们的 AI 使用先进的机器学习模型来解释您的文本描述并生成独特的 favicon 设计。您只需输入您想要的内容（例如'极简主义山脉标志'），AI 就会为您创建多个选项供您选择。"
+      },
+      "q2": {
+        "question": "我可以下载哪些文件格式？",
+        "answer": "根据您的计划，您可以下载各种格式的 favicon，包括 PNG（多种尺寸，如 16x16、32x32 等）和高分辨率 SVG。我们的专业版和企业版提供 SVG 下载，用于清晰、可缩放的图标。"
+      },
+      "q3": {
+        "question": "我可以将 favicon 用于商业项目吗？",
+        "answer": "可以！在我们的专业版和企业版计划下生成的 favicon 附带完整的商业许可，允许您将其用于任何业务或客户项目，无需署名。"
+      },
+      "q4": {
+        "question": "如果我对生成的 favicon 不满意怎么办？",
+        "answer": "您可以通过调整文本提示生成多组 favicon。我们的免费计划允许每月生成 10 次，而付费计划提供无限生成，因此您可以不断尝试，直到找到完美的设计。"
+      },
+      "q5": {
+        "question": "使用此工具需要任何设计技能吗？",
+        "answer": "完全不需要！我们的工具专为所有人设计，无论其设计经验如何。如果您能描述您想要的内容，我们的 AI 就能为您创建。这是获得专业 favicon 的最简单方法。"
+      }
+    }
   }
 }
-
