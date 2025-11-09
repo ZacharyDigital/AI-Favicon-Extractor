@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useLocale } from 'next-intl';
 import { usePathname } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
@@ -19,6 +20,14 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { locales, labels, flags } = appConfig.i18n;
+  const [isMounted, setIsMounted] = useState(false);
+
+  // 确保组件仅在客户端挂载后渲染
+  useEffect(() => {
+    // 使用 startTransition 始改搇示是非不可中断整更
+    const timer = setTimeout(() => setIsMounted(true), 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   const switchLanguage = (locale: string) => {
     const params = searchParams.toString();
@@ -26,6 +35,11 @@ export function LanguageSwitcher() {
     const url = `/${locale}${pathname}${params ? `?${params}` : ''}`;
     window.location.assign(url);
   };
+
+  // 防止水合错误：在客户端完全挂载前不渲染此组件
+  if (!isMounted) {
+    return <div className="h-9 w-auto min-w-[140px]" />;
+  }
 
   const currentFlag = flags[currentLocale];
   const currentLabel = labels[currentLocale];
