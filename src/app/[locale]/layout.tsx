@@ -136,7 +136,6 @@ export async function generateMetadata({
         ])
       ),
     },
-    manifest: '/manifest.webmanifest',
     category: 'technology',
     applicationName: 'Favicon Extractor',
     formatDetection: {
@@ -169,6 +168,13 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
 };
+
+// 静态生成所有语言版本的布局（SSG）
+export async function generateStaticParams() {
+  return appConfig.i18n.locales.map((locale) => ({
+    locale,
+  }));
+}
 
 export default async function RootLayout({
   children,

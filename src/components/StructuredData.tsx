@@ -8,6 +8,21 @@ interface StructuredDataProps {
 export async function StructuredData({ locale }: StructuredDataProps) {
   const t = await getTranslations({ locale });
 
+  // 语言代码映射（Schema.org 格式）
+  const languageMap: Record<string, string> = {
+    en: 'en-US',
+    zh: 'zh-CN',
+    es: 'es-ES',
+    ja: 'ja-JP',
+    ko: 'ko-KR',
+    vi: 'vi-VN',
+    fr: 'fr-FR',
+    ru: 'ru-RU',
+    de: 'de-DE',
+    it: 'it-IT',
+    pt: 'pt-PT',
+  };
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -32,7 +47,7 @@ export async function StructuredData({ locale }: StructuredDataProps) {
       t('features.one_click_zip'),
       t('features.smart_analysis'),
     ],
-    inLanguage: locale === 'zh' ? 'zh-CN' : 'en-US',
+    inLanguage: languageMap[locale] || 'en-US',
   };
 
   return (

@@ -9,6 +9,13 @@ import { appConfig } from '@/config';
 // 使用统一配置的站点 URL
 const siteUrl = appConfig.siteUrl;
 
+// 静态生成所有语言版本的页面（SSG）
+export async function generateStaticParams() {
+  return appConfig.i18n.locales.map((locale) => ({
+    locale,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -48,7 +55,22 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      locale: (() => {
+        const localeMap: Record<string, string> = {
+          en: 'en_US',
+          zh: 'zh_CN',
+          es: 'es_ES',
+          ja: 'ja_JP',
+          ko: 'ko_KR',
+          vi: 'vi_VN',
+          fr: 'fr_FR',
+          ru: 'ru_RU',
+          de: 'de_DE',
+          it: 'it_IT',
+          pt: 'pt_PT',
+        };
+        return localeMap[locale] || 'en_US';
+      })(),
       url: currentUrl,
       title: t('meta.og_title') || t('meta.title'),
       description: t('meta.description'),
