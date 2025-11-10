@@ -14,10 +14,14 @@
     "subtitle": "Công cụ trích xuất favicon toàn diện nhất",
     "brand": "AI Favicon",
     "nav": {
+      "home": "Trang chủ",
+      "docs": "Tài liệu",
+      "blog": "Blog",
       "generate": "Tạo",
       "examples": "Ví dụ",
       "pricing": "Giá cả",
-      "about": "Giới thiệu"
+      "about": "Giới thiệu",
+      "generate_image": "Tạo từ Hình ảnh"
     },
     "signup": "Đăng ký"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. Bảo lưu mọi quyền.",
     "terms": "Điều khoản dịch vụ",
     "privacy": "Chính sách bảo mật",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "generate_image": "Tạo từ Hình ảnh"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "ví dụ, 'Một bộ não làm bằng mạch điện'",
       "button": "Tạo"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "Tài liệu - Trình Trích Xuất Favicon AI",
+      "description": "Học cách sử dụng AI Favicon Extractor để trích xuất favicon từ bất kỳ trang web nào",
+      "og_title": "Tài liệu AI Favicon Extractor"
+    },
+    "nav": {
+      "getting_started": "Bắt đầu",
+      "introduction": "Giới thiệu",
+      "installation": "Cài đặt",
+      "features": "Tính năng",
+      "extraction": "Trích xuất Favicon",
+      "generation": "Tạo Favicon"
+    }
+  },
+  "search": {
+    "placeholder": "Tìm kiếm tài liệu...",
+    "searching": "Đang tìm kiếm...",
+    "no_results": "Không tìm thấy kết quả",
+    "start_typing": "Bắt đầu nhập để tìm kiếm",
+    "close_hint": "Nhấn ESC để đóng",
+    "open_hint": "Nhấn ⌘K để mở",
+    "docs": "Tài liệu",
+    "blog": "Blog"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - Trình Trích Xuất Favicon AI",
+      "description": "Tin tức mới nhất, mẹo và hướng dẫn về trích xuất và tạo favicon",
+      "og_title": "Blog AI Favicon Extractor"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Trình tạo Favicon - Tạo từ Hình ảnh",
+      "description": "Tải lên hình ảnh và tạo favicon ngay lập tức.",
+      "og_title": "Tạo favicon từ hình ảnh"
+    },
+    "title": "Tạo từ Hình ảnh",
+    "subtitle": "Tải lên hình ảnh để tạo gói favicon đầy đủ ngay lập tức.",
+    "upload_title": "Tải lên Hình ảnh",
+    "upload_desc": "Hỗ trợ PNG, JPG. Hình ảnh được xử lý cục bộ.",
+    "browse_files": "Duyệt Tệp",
+    "background": "Nền",
+    "transparent_background": "Nền trong suốt",
+    "padding": "Khoảng cách",
+    "shape": "Hình dạng",
+    "live_preview": "Xem trước trực tiếp",
+    "package_title": "Nội dung Gói",
+    "instant_generate": "Tạo Ngay",
+    "download_all_zip": "Tải tất cả dưới dạng ZIP",
+    "preview_browser_light": "Giao diện Sáng",
+    "preview_browser_dark": "Giao diện Tối",
+    "preview_google_light": "Chế độ Sáng",
+    "preview_google_dark": "Chế độ Tối",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "Màn hình chính",
+    "preview_android_splash": "Màn hình khởi động",
+    "preview_android_switch": "Chuyển ứng dụng",
+    "preview_windows": "Tile Windows 11"
   }
 }

@@ -14,10 +14,14 @@
     "subtitle": "가장 포괄적인 favicon 추출 도구",
     "brand": "AI Favicon",
     "nav": {
+      "home": "홈",
+      "docs": "문서",
+      "blog": "블로그",
       "generate": "생성",
       "examples": "예제",
       "pricing": "요금",
-      "about": "정보"
+      "about": "정보",
+      "generate_image": "이미지로 생성"
     },
     "signup": "가입"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. 모든 권리 보유.",
     "terms": "서비스 약관",
     "privacy": "개인정보 보호정책",
-    "contact": "문의하기"
+    "contact": "문의하기",
+    "generate_image": "이미지로 생성"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "예: '회로로 만든 뇌'",
       "button": "생성"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "문서 - AI Favicon 추출기",
+      "description": "AI Favicon Extractor를 사용하여 모든 웹사이트에서 favicon을 추출하는 방법 학습",
+      "og_title": "AI Favicon Extractor 문서"
+    },
+    "nav": {
+      "getting_started": "빠른 시작",
+      "introduction": "소개",
+      "installation": "설치",
+      "features": "기능",
+      "extraction": "Favicon 추출",
+      "generation": "Favicon 생성"
+    }
+  },
+  "search": {
+    "placeholder": "문서 검색...",
+    "searching": "검색 중...",
+    "no_results": "결과가 없습니다",
+    "start_typing": "입력하여 검색 시작",
+    "close_hint": "ESC로 닫기",
+    "open_hint": "⌘K로 열기",
+    "docs": "문서",
+    "blog": "블로그"
+  },
+  "blog": {
+    "meta": {
+      "title": "블로그 - AI Favicon 추출기",
+      "description": "favicon 추출 및 생성에 대한 최신 뉴스, 팁 및 튜토리얼",
+      "og_title": "AI Favicon Extractor 블로그"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Favicon 생성기 - 이미지로 생성",
+      "description": "이미지를 업로드하고 즉시 favicon을 생성하세요.",
+      "og_title": "이미지로 favicon 생성"
+    },
+    "title": "이미지로 생성",
+    "subtitle": "이미지를 업로드하여 완전한 favicon 패키지를 즉시 생성합니다.",
+    "upload_title": "이미지 업로드",
+    "upload_desc": "PNG, JPG 지원. 이미지는 로컬에서 처리됩니다.",
+    "browse_files": "파일 탐색",
+    "background": "배경",
+    "transparent_background": "투명 배경",
+    "padding": "패딩",
+    "shape": "모양",
+    "live_preview": "라이브 미리보기",
+    "package_title": "패키지 내용",
+    "instant_generate": "즉시 생성",
+    "download_all_zip": "모두 ZIP으로 다운로드",
+    "preview_browser_light": "라이트 테마",
+    "preview_browser_dark": "다크 테마",
+    "preview_google_light": "라이트 모드",
+    "preview_google_dark": "다크 모드",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "홈 화면",
+    "preview_android_splash": "스플래시 화면",
+    "preview_android_switch": "앱 전환기",
+    "preview_windows": "Windows 11 타일"
   }
 }

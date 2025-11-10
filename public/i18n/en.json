@@ -14,10 +14,14 @@
     "subtitle": "The most comprehensive favicon extraction tool",
     "brand": "AI Favicon",
     "nav": {
+      "home": "Home",
+      "docs": "Docs",
+      "blog": "Blog",
       "generate": "Generate",
       "examples": "Examples",
       "pricing": "Pricing",
-      "about": "About"
+      "about": "About",
+      "generate_image": "Generate from Image"
     },
     "signup": "Sign Up"
   },
@@ -85,11 +89,12 @@
     "copyright": "© {year} AI Favicon. All rights reserved.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
-    "contact": "Contact"
+    "contact": "Contact",
+    "generate_image": "Generate from Image"
   },
   "page": {
     "hero": {
-      "title": "Create the Perfect Favicon with AI",
+      "title": "2025 Create the Perfect Favicon with AI",
       "subtitle": "Describe your brand in words, and let our AI design a unique and memorable favicon for you in seconds.",
       "placeholder": "e.g., 'A brain made of circuits'",
       "button": "Generate"
@@ -197,5 +202,66 @@
         "answer": "Not at all! Our tool is designed for everyone, regardless of their design experience. If you can describe what you want, our AI can create it for you. It's the simplest way to get a professional favicon."
       }
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "Documentation - AI Favicon Extractor",
+      "description": "Learn how to use AI Favicon Extractor to extract favicons from any website",
+      "og_title": "AI Favicon Extractor Documentation"
+    },
+    "nav": {
+      "getting_started": "Getting Started",
+      "introduction": "Introduction",
+      "installation": "Installation",
+      "features": "Features",
+      "extraction": "Favicon Extraction",
+      "generation": "Favicon Generation"
+    }
+  },
+  "search": {
+    "placeholder": "Search docs...",
+    "searching": "Searching...",
+    "no_results": "No results found",
+    "start_typing": "Start typing to search",
+    "close_hint": "Press ESC to close",
+    "open_hint": "Press ⌘K to open",
+    "docs": "Docs",
+    "blog": "Blog"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - AI Favicon Extractor",
+      "description": "Latest news, tips, and tutorials about favicon extraction and generation",
+      "og_title": "AI Favicon Extractor Blog"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Favicon Generator - Generate from Image",
+      "description": "Upload an image and generate favicons instantly.",
+      "og_title": "Generate favicon from image"
+    },
+    "title": "Generate from Image",
+    "subtitle": "Upload an image and instantly generate a complete favicon package.",
+    "upload_title": "Upload an Image",
+    "upload_desc": "PNG, JPG supported. Your image will be processed locally.",
+    "browse_files": "Browse Files",
+    "background": "Background",
+    "transparent_background": "Transparent Background",
+    "padding": "Padding",
+    "shape": "Shape",
+    "live_preview": "Live Preview",
+    "package_title": "Package Contents",
+    "instant_generate": "Instant Generate",
+    "download_all_zip": "Download All as ZIP",
+    "preview_browser_light": "Light Theme",
+    "preview_browser_dark": "Dark Theme",
+    "preview_google_light": "Light Mode",
+    "preview_google_dark": "Dark Mode",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "Home Screen",
+    "preview_android_splash": "Splash Screen",
+    "preview_android_switch": "App Switcher",
+    "preview_windows": "Windows 11 Tile"
   }
 }

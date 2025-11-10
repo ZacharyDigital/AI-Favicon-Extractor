@@ -14,10 +14,14 @@
     "subtitle": "Das umfassendste Favicon-Extraktions-Tool",
     "brand": "AI Favicon",
     "nav": {
+      "home": "Startseite",
+      "docs": "Dokumentation",
+      "blog": "Blog",
       "generate": "Generieren",
       "examples": "Beispiele",
       "pricing": "Preise",
-      "about": "Über uns"
+      "about": "Über uns",
+      "generate_image": "Aus Bild generieren"
     },
     "signup": "Registrieren"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. Alle Rechte vorbehalten.",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzrichtlinie",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "generate_image": "Aus Bild generieren"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "z.B., 'Ein Gehirn aus Schaltkreisen'",
       "button": "Generieren"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "Dokumentation - KI Favicon Extrahierer",
+      "description": "Erfahren Sie, wie Sie AI Favicon Extractor verwenden, um Favicons von jeder Website zu extrahieren",
+      "og_title": "AI Favicon Extractor Dokumentation"
+    },
+    "nav": {
+      "getting_started": "Erste Schritte",
+      "introduction": "Einführung",
+      "installation": "Installation",
+      "features": "Funktionen",
+      "extraction": "Favicon-Extraktion",
+      "generation": "Favicon-Generierung"
+    }
+  },
+  "search": {
+    "placeholder": "Dokumente durchsuchen...",
+    "searching": "Suche läuft...",
+    "no_results": "Keine Ergebnisse gefunden",
+    "start_typing": "Tippen Sie, um zu suchen",
+    "close_hint": "ESC zum Schließen drücken",
+    "open_hint": "⌘K zum Öffnen drücken",
+    "docs": "Docs",
+    "blog": "Blog"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - KI Favicon Extrahierer",
+      "description": "Neueste Nachrichten, Tipps und Tutorials zur Favicon-Extraktion und -Generierung",
+      "og_title": "AI Favicon Extractor Blog"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Favicon-Generator – Aus Bild generieren",
+      "description": "Laden Sie ein Bild hoch und generieren Sie sofort Favicons.",
+      "og_title": "Favicon aus Bild generieren"
+    },
+    "title": "Aus Bild generieren",
+    "subtitle": "Bild hochladen und sofort ein komplettes Favicon-Paket erstellen.",
+    "upload_title": "Bild hochladen",
+    "upload_desc": "PNG, JPG werden unterstützt. Ihr Bild wird lokal verarbeitet.",
+    "browse_files": "Dateien durchsuchen",
+    "background": "Hintergrund",
+    "transparent_background": "Transparenter Hintergrund",
+    "padding": "Abstand",
+    "shape": "Form",
+    "live_preview": "Live-Vorschau",
+    "package_title": "Paketinhalt",
+    "instant_generate": "Sofort generieren",
+    "download_all_zip": "Alles als ZIP herunterladen",
+    "preview_browser_light": "Helles Design",
+    "preview_browser_dark": "Dunkles Design",
+    "preview_google_light": "Hell-Modus",
+    "preview_google_dark": "Dunkel-Modus",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "Startbildschirm",
+    "preview_android_splash": "Splash-Screen",
+    "preview_android_switch": "App-Umschalter",
+    "preview_windows": "Windows 11 Kachel"
   }
 }

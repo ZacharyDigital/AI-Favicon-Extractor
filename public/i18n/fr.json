@@ -14,10 +14,14 @@
     "subtitle": "L'outil d'extraction de favicon le plus complet",
     "brand": "AI Favicon",
     "nav": {
+      "home": "Accueil",
+      "docs": "Documentation",
+      "blog": "Blog",
       "generate": "Générer",
       "examples": "Exemples",
       "pricing": "Tarifs",
-      "about": "À propos"
+      "about": "À propos",
+      "generate_image": "Générer depuis une image"
     },
     "signup": "S'inscrire"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. Tous droits réservés.",
     "terms": "Conditions d'utilisation",
     "privacy": "Politique de confidentialité",
-    "contact": "Contact"
+    "contact": "Contact",
+    "generate_image": "Générer depuis une image"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "ex., 'Un cerveau fait de circuits'",
       "button": "Générer"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "Documentation - Extracteur de Favicon IA",
+      "description": "Apprenez à utiliser AI Favicon Extractor pour extraire des favicons de n'importe quel site web",
+      "og_title": "Documentation AI Favicon Extractor"
+    },
+    "nav": {
+      "getting_started": "Démarrage rapide",
+      "introduction": "Introduction",
+      "installation": "Installation",
+      "features": "Fonctionnalités",
+      "extraction": "Extraction de Favicon",
+      "generation": "Génération de Favicon"
+    }
+  },
+  "search": {
+    "placeholder": "Rechercher des documents...",
+    "searching": "Recherche en cours...",
+    "no_results": "Aucun résultat trouvé",
+    "start_typing": "Commencez à taper pour rechercher",
+    "close_hint": "Appuyez sur ESC pour fermer",
+    "open_hint": "Appuyez sur ⌘K pour ouvrir",
+    "docs": "Docs",
+    "blog": "Blog"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - Extracteur de Favicon IA",
+      "description": "Dernières actualités, conseils et tutoriels sur l'extraction et la génération de favicons",
+      "og_title": "Blog AI Favicon Extractor"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Générateur de Favicon - Générer depuis une image",
+      "description": "Téléchargez une image et générez des favicons instantanément.",
+      "og_title": "Générer un favicon depuis une image"
+    },
+    "title": "Générer depuis une image",
+    "subtitle": "Téléchargez une image et générez instantanément un paquet complet de favicon.",
+    "upload_title": "Télécharger une Image",
+    "upload_desc": "PNG, JPG pris en charge. Votre image est traitée localement.",
+    "browse_files": "Parcourir les Fichiers",
+    "background": "Arrière-plan",
+    "transparent_background": "Arrière-plan transparent",
+    "padding": "Marge interne",
+    "shape": "Forme",
+    "live_preview": "Aperçu en direct",
+    "package_title": "Contenu du paquet",
+    "instant_generate": "Génération instantanée",
+    "download_all_zip": "Tout télécharger en ZIP",
+    "preview_browser_light": "Thème Clair",
+    "preview_browser_dark": "Thème Sombre",
+    "preview_google_light": "Mode Clair",
+    "preview_google_dark": "Mode Sombre",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "Écran d'accueil",
+    "preview_android_splash": "Écran Splash",
+    "preview_android_switch": "Sélecteur Apps",
+    "preview_windows": "Tuile Windows 11"
   }
 }

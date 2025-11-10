@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favicon Generator from Image</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f13ec",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#21182c",
+                        "border-light": "#ede7f3",
+                        "border-dark": "#3a2d48",
+                        "text-primary-light": "#140d1b",
+                        "text-primary-dark": "#f7f6f8",
+                        "text-secondary-light": "#734c9a",
+                        "text-secondary-dark": "#a28ab8",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark px-4 sm:px-6 md:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">FaviconGen</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-sm font-medium leading-normal" href="#">Generate from Text</a>
+<a class="text-sm font-medium leading-normal" href="#">FAQ</a>
+<a class="text-sm font-medium leading-normal" href="#">Pricing</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-text-primary-light dark:text-text-primary-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1 px-4 sm:px-6 md:px-10 py-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col gap-4 mb-8">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em]">Generate Favicon from Image</h1>
+<p class="text-base font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">Upload an image, customize it, and get your complete favicon package in seconds.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Left Panel: Controls -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-border-light dark:border-border-dark px-6 py-14 bg-surface-light dark:bg-surface-dark">
+<div class="flex max-w-[480px] flex-col items-center gap-2 text-center">
+<p class="text-lg font-bold leading-tight tracking-[-0.015em]">Upload Your Image</p>
+<p class="text-sm font-normal leading-normal">Drag &amp; drop your file here, or click to browse. Supports PNG, JPG, SVG. Max 5MB.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-text-primary-light dark:text-text-primary-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Browse Files</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<details class="flex flex-col rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px] group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-sm font-medium leading-normal">Background</p>
+<div class="text-text-primary-light dark:text-text-primary-dark group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="pt-2 pb-4 space-y-4">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">Choose a background color for your favicon.</p>
+<div class="flex flex-wrap gap-4">
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2" style="background-color: rgb(255, 255, 255);">
+<input class="invisible" name="background-color" type="radio" value="#ffffff"/>
+</label>
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2" style="background-color: rgb(20, 13, 27);">
+<input class="invisible" name="background-color" type="radio" value="#140d1b"/>
+</label>
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2" style="background-color: rgb(74, 144, 226);">
+<input checked="" class="invisible" name="background-color" type="radio" value="#4a90e2"/>
+</label>
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2" style="background-color: rgb(0, 196, 159);">
+<input class="invisible" name="background-color" type="radio" value="#00c49f"/>
+</label>
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2" style="background-color: rgb(255, 107, 107);">
+<input class="invisible" name="background-color" type="radio" value="#ff6b6b"/>
+</label>
+<label class="size-10 rounded-full border border-border-light dark:border-border-dark ring-primary has-[:checked]:border-[3px] has-[:checked]:border-surface-light dark:has-[:checked]:border-surface-dark has-[:checked]:ring-2 flex items-center justify-center" style="background: conic-gradient(from 180deg at 50% 50%, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);">
+<span class="material-symbols-outlined text-text-primary-light dark:text-text-primary-dark">add</span>
+<input class="invisible absolute" name="background-color" type="radio" value="custom"/>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<label class="text-sm font-medium" for="transparent-bg">Transparent Background</label>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="transparent-bg" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 dark:bg-gray-700 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</details>
+<details class="flex flex-col rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px] group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-sm font-medium leading-normal">Padding</p>
+<div class="text-text-primary-light dark:text-text-primary-dark group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="pt-2 pb-4 space-y-4">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">Adjust the space around your image.</p>
+<div class="flex items-center gap-4">
+<input class="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary" max="50" min="0" type="range" value="10"/>
+<span class="text-sm font-medium w-8 text-center">10%</span>
+</div>
+</div>
+</details>
+<details class="flex flex-col rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px] group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-sm font-medium leading-normal">Shape</p>
+<div class="text-text-primary-light dark:text-text-primary-dark group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="pt-2 pb-4 space-y-4">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal">Set the corner radius for the background.</p>
+<div class="flex items-center gap-4">
+<input class="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary" max="50" min="0" type="range" value="25"/>
+<span class="text-sm font-medium w-8 text-center">25%</span>
+</div>
+</div>
+</details>
+</div>
+</div>
+<!-- Right Panel: Preview & Output -->
+<div class="flex flex-col gap-6">
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-6">
+<h3 class="text-lg font-bold mb-4">Live Preview</h3>
+<div class="flex items-center justify-center p-8 rounded-lg bg-background-light dark:bg-background-dark">
+<div class="p-2 bg-white dark:bg-gray-800 shadow-md rounded-lg flex items-center gap-2">
+<div class="size-6 rounded-md bg-[#4a90e2] flex items-center justify-center">
+<img alt="letter A logo" class="h-4 w-4" data-alt="A sample logo for preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNxZrTKlv6pyroXV_a62wRray5lRAf82MN41hskxwy7kBlVRiOzbXCz0OZwlyJDWPDIg50vZL8VdYBpwZ5_JrQNA_z8kCjlEbjGIqQz5urxgkUeyYRY_VehnmPCING_9JzE2DB74Mh2le0u8Hf4NGPlldlhrzA4A_wTx3b3nqb8h-IN-Q7Gc7_JDDmnyXqKSVmwG2vgkaYkA9tmoOK3E9lPl2dx2zHcfAjLEN1XkV-LqUnJj7lmN3qc82qkuHJMEddn5e5RD0rT3Q"/>
+</div>
+<span class="text-sm text-gray-700 dark:text-gray-300">Your Website</span>
+<span class="material-symbols-outlined text-gray-400 text-base">close</span>
+</div>
+</div>
+<p class="text-sm text-center mt-4 text-text-secondary-light dark:text-text-secondary-dark">Preview of your favicon in a browser tab.</p>
+</div>
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-6">
+<h3 class="text-lg font-bold mb-4">Your Favicon Package</h3>
+<div class="space-y-3 max-h-60 overflow-y-auto pr-2">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>android-chrome-192x192.png</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">12KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>android-chrome-512x512.png</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">34KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>apple-touch-icon.png</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">15KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>favicon-16x16.png</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">1KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>favicon-32x32.png</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">2KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">image</span>
+<span>favicon.ico</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">5KB</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">description</span>
+<span>site.webmanifest</span>
+</div>
+<span class="text-text-secondary-light dark:text-text-secondary-dark">1KB</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary/20 text-text-primary-light dark:text-text-primary-dark text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Instant Generate</span>
+</button>
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Download All (ZIP)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

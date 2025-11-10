@@ -25,6 +25,15 @@ export async function Footer({ locale }: FooterProps) {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6 text-sm text-slate-500">
+          <a className="transition-colors hover:text-[#7f13ec]" href={`/${locale}/docs`}>
+            {t('header.nav.docs')}
+          </a>
+          <a className="transition-colors hover:text-[#7f13ec]" href={`/${locale}/blog`}>
+            {t('header.nav.blog')}
+          </a>
+          <a className="transition-colors hover:text-[#7f13ec]" href={`/${locale}/image-generator`}>
+            {t('footer.generate_image')}
+          </a>
           <a className="transition-colors hover:text-[#7f13ec]" href="#terms">
             {t('footer.terms')}
           </a>

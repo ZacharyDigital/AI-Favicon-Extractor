@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
   // Docker 部署优化
   output: 'standalone',
 
+  // MDX 支持
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+
   // 图片优化
   images: {
     remotePatterns: [

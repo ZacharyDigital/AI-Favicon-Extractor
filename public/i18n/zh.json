@@ -6,17 +6,22 @@
   "meta": {
     "title": "Favicon 提取器 - 最全面的工具",
     "description": "通过深度爬取从任何网站提取所有 favicon。支持 HTML、Web Manifest、BrowserConfig，并提供智能分析和下载选项。",
-    "og_title": "Favicon 提取器 - 提取网站图标"
+    "og_title": "Favicon 提取器 - 提取网站图标",
+    "twitter_creator": "@faviconextractor"
   },
   "header": {
     "title": "AI Favicon 提取器",
     "subtitle": "最全面的 favicon 提取工具",
     "brand": "AI Favicon",
     "nav": {
+      "home": "首页",
+      "docs": "文档",
+      "blog": "博客",
       "generate": "生成",
       "examples": "示例",
       "pricing": "定价",
-      "about": "关于"
+      "about": "关于",
+      "generate_image": "从图像生成"
     },
     "signup": "注册"
   },
@@ -84,7 +89,8 @@
     "copyright": "© {year} AI Favicon. 保留所有权利。",
     "terms": "服务条款",
     "privacy": "隐私政策",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "generate_image": "从图像生成"
   },
   "page": {
     "hero": {
@@ -196,5 +202,66 @@
         "answer": "完全不需要！我们的工具专为所有人设计，无论其设计经验如何。如果您能描述您想要的内容，我们的 AI 就能为您创建。这是获得专业 favicon 的最简单方法。"
       }
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "文档 - AI Favicon 提取器",
+      "description": "学习如何使用 AI Favicon Extractor 从任何网站提取 favicons",
+      "og_title": "AI Favicon Extractor 文档"
+    },
+    "nav": {
+      "getting_started": "快速开始",
+      "introduction": "简介",
+      "installation": "安装",
+      "features": "功能特性",
+      "extraction": "Favicon 提取",
+      "generation": "Favicon 生成"
+    }
+  },
+  "search": {
+    "placeholder": "搜索文档...",
+    "searching": "搜索中...",
+    "no_results": "没有找到相关结果",
+    "start_typing": "输入关键词开始搜索",
+    "close_hint": "按 ESC 关闭",
+    "open_hint": "按 ⌘K 打开",
+    "docs": "文档",
+    "blog": "博客"
+  },
+  "blog": {
+    "meta": {
+      "title": "博客 - AI Favicon 提取器",
+      "description": "关于 favicon 提取和生成的最新新闻、技巧和教程",
+      "og_title": "AI Favicon Extractor 博客"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Favicon 生成器 - 从图像生成",
+      "description": "上传图片，立即生成完整 Favicon 包。",
+      "og_title": "从图像生成 favicon"
+    },
+    "title": "从图像生成",
+    "subtitle": "上传图片，立即生成完整的 Favicon 资源。",
+    "upload_title": "上传图片",
+    "upload_desc": "支持 PNG、JPG。图片将在本地处理。",
+    "browse_files": "浏览文件",
+    "background": "背景",
+    "transparent_background": "透明背景",
+    "padding": "内边距",
+    "shape": "形状",
+    "live_preview": "实时预览",
+    "package_title": "打包内容",
+    "instant_generate": "立即生成",
+    "download_all_zip": "全部下载为 ZIP",
+    "preview_browser_light": "浅色主题",
+    "preview_browser_dark": "深色主题",
+    "preview_google_light": "浅色模式",
+    "preview_google_dark": "深色模式",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "主屏幕",
+    "preview_android_splash": "启动页",
+    "preview_android_switch": "应用切换",
+    "preview_windows": "Windows 11 磁贴"
   }
 }

@@ -122,7 +122,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* Layout Container */}
       <div className="flex h-full flex-1 flex-col">
         <div className="flex flex-1 justify-center px-4 py-5 md:px-10 lg:px-20 xl:px-40">
-          <div className="layout-content-container flex w-full max-w-[960px] flex-1 flex-col">
+          <div className="layout-content-container flex w-full max-w-[1400px] flex-1 flex-col">
             {/* Header */}
             <Header locale={locale} />
 

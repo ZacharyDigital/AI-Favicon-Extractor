@@ -14,10 +14,14 @@
     "subtitle": "最も包括的なfavicon抽出ツール",
     "brand": "AI Favicon",
     "nav": {
+      "home": "ホーム",
+      "docs": "ドキュメント",
+      "blog": "ブログ",
       "generate": "生成",
       "examples": "例",
       "pricing": "料金",
-      "about": "概要"
+      "about": "概要",
+      "generate_image": "画像から生成"
     },
     "signup": "登録"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. 全ての権利を保有。",
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "generate_image": "画像から生成"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "例：'回路でできた脳'",
       "button": "生成"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "ドキュメント - AI Favicon 抽出ツール",
+      "description": "AI Favicon Extractorを使用して任意のウェブサイトからfaviconを抽出する方法を学ぶ",
+      "og_title": "AI Favicon Extractor ドキュメント"
+    },
+    "nav": {
+      "getting_started": "クイックスタート",
+      "introduction": "はじめに",
+      "installation": "インストール",
+      "features": "機能",
+      "extraction": "Favicon抽出",
+      "generation": "Favicon生成"
+    }
+  },
+  "search": {
+    "placeholder": "ドキュメントを検索...",
+    "searching": "検索中...",
+    "no_results": "結果が見つかりません",
+    "start_typing": "入力して検索を開始",
+    "close_hint": "ESCで閉じる",
+    "open_hint": "⌘Kで開く",
+    "docs": "ドキュメント",
+    "blog": "ブログ"
+  },
+  "blog": {
+    "meta": {
+      "title": "ブログ - AI Favicon 抽出ツール",
+      "description": "faviconの抽出と生成に関する最新ニュース、ヒント、チュートリアル",
+      "og_title": "AI Favicon Extractor ブログ"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Faviconジェネレーター - 画像から生成",
+      "description": "画像をアップロードして、すぐにfaviconを生成します。",
+      "og_title": "画像からfaviconを生成"
+    },
+    "title": "画像から生成",
+    "subtitle": "画像をアップロードして、完全なfaviconパッケージを即座に作成。",
+    "upload_title": "画像をアップロード",
+    "upload_desc": "PNG、JPGに対応。画像はローカルで処理されます。",
+    "browse_files": "ファイルを選択",
+    "background": "背景",
+    "transparent_background": "透明背景",
+    "padding": "余白",
+    "shape": "形状",
+    "live_preview": "ライブプレビュー",
+    "package_title": "パッケージ内容",
+    "instant_generate": "即時生成",
+    "download_all_zip": "すべてZIPでダウンロード",
+    "preview_browser_light": "ライトテーマ",
+    "preview_browser_dark": "ダークテーマ",
+    "preview_google_light": "ライトモード",
+    "preview_google_dark": "ダークモード",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "ホーム画面",
+    "preview_android_splash": "スプラッシュ",
+    "preview_android_switch": "アプリ切替",
+    "preview_windows": "Windows 11 タイル"
   }
 }

@@ -14,10 +14,14 @@
     "subtitle": "Самый полный инструмент для извлечения favicon",
     "brand": "AI Favicon",
     "nav": {
+      "home": "Главная",
+      "docs": "Документация",
+      "blog": "Блог",
       "generate": "Генерировать",
       "examples": "Примеры",
       "pricing": "Цены",
-      "about": "О нас"
+      "about": "О нас",
+      "generate_image": "Генерация из изображения"
     },
     "signup": "Регистрация"
   },
@@ -85,7 +89,8 @@
     "copyright": "© {year} AI Favicon. Все права защищены.",
     "terms": "Условия использования",
     "privacy": "Политика конфиденциальности",
-    "contact": "Контакты"
+    "contact": "Контакты",
+    "generate_image": "Генерация из изображения"
   },
   "page": {
     "hero": {
@@ -94,5 +99,66 @@
       "placeholder": "напр., 'Мозг из схем'",
       "button": "Генерировать"
     }
+  },
+  "docs": {
+    "meta": {
+      "title": "Документация - Извлекатель Favicon ИИ",
+      "description": "Узнайте, как использовать AI Favicon Extractor для извлечения favicon с любого веб-сайта",
+      "og_title": "Документация AI Favicon Extractor"
+    },
+    "nav": {
+      "getting_started": "Быстрый старт",
+      "introduction": "Введение",
+      "installation": "Установка",
+      "features": "Возможности",
+      "extraction": "Извлечение Favicon",
+      "generation": "Генерация Favicon"
+    }
+  },
+  "search": {
+    "placeholder": "Поиск в документах...",
+    "searching": "Поиск...",
+    "no_results": "Результатов не найдено",
+    "start_typing": "Начните вводить для поиска",
+    "close_hint": "Нажмите ESC для закрытия",
+    "open_hint": "Нажмите ⌘K для открытия",
+    "docs": "Документы",
+    "blog": "Блог"
+  },
+  "blog": {
+    "meta": {
+      "title": "Блог - Извлекатель Favicon ИИ",
+      "description": "Последние новости, советы и учебники по извлечению и генерации favicon",
+      "og_title": "Блог AI Favicon Extractor"
+    }
+  },
+  "image_generator": {
+    "meta": {
+      "title": "Генератор Favicon — Генерация из изображения",
+      "description": "Загрузите изображение и мгновенно создайте favicon.",
+      "og_title": "Создать favicon из изображения"
+    },
+    "title": "Генерация из изображения",
+    "subtitle": "Загрузите изображение и мгновенно сформируйте полный пакет favicon.",
+    "upload_title": "Загрузить изображение",
+    "upload_desc": "Поддерживаются PNG, JPG. Ваше изображение обрабатывается локально.",
+    "browse_files": "Выбрать файлы",
+    "background": "Фон",
+    "transparent_background": "Прозрачный фон",
+    "padding": "Отступы",
+    "shape": "Форма",
+    "live_preview": "Живой просмотр",
+    "package_title": "Содержимое пакета",
+    "instant_generate": "Мгновенная генерация",
+    "download_all_zip": "Скачать всё в ZIP",
+    "preview_browser_light": "Светлая тема",
+    "preview_browser_dark": "Тёмная тема",
+    "preview_google_light": "Светлый режим",
+    "preview_google_dark": "Тёмный режим",
+    "preview_apple_touch": "iOS 180x180",
+    "preview_android_home": "Главный экран",
+    "preview_android_splash": "Заставка",
+    "preview_android_switch": "Переключатель",
+    "preview_windows": "Плитка Windows 11"
   }
 }

@@ -27,27 +27,27 @@ export async function Header({ locale }: HeaderProps) {
         <div className="flex items-center gap-9">
           <a
             className="text-sm font-medium leading-normal text-slate-700 transition-colors hover:text-[#7f13ec]"
-            href="#extract"
+            href={`/${locale}`}
           >
-            {t('header.nav.generate')}
+            {t('header.nav.home')}
           </a>
           <a
             className="text-sm font-medium leading-normal text-slate-700 transition-colors hover:text-[#7f13ec]"
-            href="#examples"
+            href={`/${locale}/docs`}
           >
-            {t('header.nav.examples')}
+            {t('header.nav.docs')}
           </a>
           <a
             className="text-sm font-medium leading-normal text-slate-700 transition-colors hover:text-[#7f13ec]"
-            href="#pricing"
+            href={`/${locale}/blog`}
           >
-            {t('header.nav.pricing')}
+            {t('header.nav.blog')}
           </a>
           <a
             className="text-sm font-medium leading-normal text-slate-700 transition-colors hover:text-[#7f13ec]"
-            href="#features"
+            href={`/${locale}/image-generator`}
           >
-            {t('header.nav.about')}
+            {t('header.nav.generate_image')}
           </a>
         </div>
 
