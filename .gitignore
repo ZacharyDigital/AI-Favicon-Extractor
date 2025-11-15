@@ -34,7 +34,7 @@ yarn-error.log*
 .env*
 !.env.example
 
-# vercel
+# vercel配置信息
 .vercel
 
 # typescript
